@@ -39,8 +39,8 @@
         ]
       },
       {
-        "id": "folder:b064eb71629d5ea80e0f",
-        "name": "Neural Networks",
+        "id": "folder:eb581feccdc64e420cb7",
+        "name": "Operators",
         "kind": "folder",
         "children": [
           {
@@ -55,14 +55,7 @@
             "sourceType": null,
             "downloadUrl": "papers/f25713f39b09a198.pdf",
             "originalFilename": "gerald-b-folland-harmonic-analysis-in-phase-space-am.pdf"
-          }
-        ]
-      },
-      {
-        "id": "folder:eb581feccdc64e420cb7",
-        "name": "Operators",
-        "kind": "folder",
-        "children": [
+          },
           {
             "id": "479afc99041bd98f",
             "name": "Operator ordering schemes and covariant path integrals of quantum and stochastic processes in Curved space",
