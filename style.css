@@ -21,3 +21,57 @@ button{font:inherit;cursor:pointer}.shell{height:100%;display:flex;flex-directio
 .search-result-meta{display:block;margin-top:3px;color:#aeb3bf;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .search-empty{padding:12px 11px;color:#aeb3bf;font-size:12px}
 @media(max-width:680px){.topbar{height:110px;min-height:110px;align-content:center;align-items:center;flex-wrap:wrap;row-gap:8px;padding:9px 14px}.brand{width:100%;font-size:19px}.actions{width:100%}.search-wrap{flex:1 1 auto;min-width:90px}.search-input{height:34px;font-size:11px;padding:7px 8px 7px 31px}.search-wrap::before{top:10px;left:11px}.search-wrap::after{top:21px;left:21px}.action{font-size:11px;padding:8px 9px;white-space:nowrap}.drawer{top:110px}.overlay.show{inset:110px 0 0}.search-results{min-width:min(340px,93vw)}}
+
+
+/* =======================================
+   DISORDER MAP — BLUE THEME
+   Blue-on-navy palette; preserves category distinction.
+   Change these values to customize the shades.
+   ======================================= */
+:root {
+  --bg: #071424;
+  --panel: #0c213b;
+  --edge: #51739a;
+  --muted: #9bb7d9;
+  --white: #e7f2ff;
+  --gold: #62adff; /* Primary accent, despite the legacy variable name. */
+  --border: #29496d;
+  --focus: #87c7ff;
+}
+body { background: var(--bg); color: var(--white); }
+.topbar { background: rgba(7, 20, 36, .97); border-bottom-color: #254664; }
+.brand span { color: #a5c9f2; }
+.canvas { background: radial-gradient(ellipse at 52% 48%, #123053 0%, #071424 76%); }
+.action { background: #0f2743; color: #dceeff; border-color: #325b82; }
+.action:hover, .action:focus-visible { background: #1c3c62; border-color: #8bc6ff; }
+.link { stroke: var(--edge); stroke-opacity: .66; }
+.node:hover circle, .node.active circle { filter: drop-shadow(0 0 7px rgba(98, 173, 255, .48)); }
+.node.folder circle { fill: #c9e1ff; stroke: #edf7ff; }
+.node.folder text { fill: #c9e1ff; }
+.node.article circle { fill: #4b9df3; stroke: #a9d7ff; }
+.node.article text { fill: #8ac3ff; }
+.node.book circle { fill: #3775b6; stroke: #8dbbea; }
+.node.book text { fill: #a4d0ff; }
+.node text { stroke: var(--bg); }
+.node .indicator { fill: #8fb1d8; }
+.drawer { background: #0b2039; border-left-color: #315377; }
+.drawer-header { border-bottom-color: var(--border); }
+.close { color: #bad9ff; }
+.close:hover { color: #f1f8ff; }
+.drawer p { color: #cbdcf2; }
+.field-label, .access { color: #98b8dc; }
+.access strong { color: #e3f1ff; }
+.external a { color: #06172c; background: var(--gold); }
+.external a:hover { background: #94caff; }
+.external a.download { color: var(--gold); border-color: var(--gold); }
+.external a.download:hover { background: rgba(98, 173, 255, .13); }
+.search-input { background: #102844; color: #e6f2ff; border-color: #325b82; }
+.search-input::placeholder { color: #98b7d8; }
+.search-input:focus { border-color: #8bc6ff; background: #173759; }
+.search-wrap::before { border-color: #a0c8f6; }
+.search-wrap::after { background: #a0c8f6; }
+.search-results { background: #102741; border-color: #37618d; }
+.search-result:hover, .search-result:focus-visible { background: #214667; }
+.search-result-meta, .search-empty { color: #afcbea; }
+.message { color: #bdd2ed; }
+::selection { background: #2e6ead; color: #fff; }
