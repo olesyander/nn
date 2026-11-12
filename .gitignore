@@ -1,0 +1,5 @@
+.DS_Store
+__MACOSX/
+# Never commit the private library into a public website repository.
+library/
+library-*/
