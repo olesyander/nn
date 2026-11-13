@@ -1,30 +1,10 @@
 {
-  "title": "NeuralNetworks map",
+  "title": "NeuralNetwork map",
   "tree": {
     "id": "root",
-    "name": "NeuralNetworks map",
+    "name": "NeuralNetwork map",
     "kind": "folder",
     "children": [
-      {
-        "id": "folder:21fad8f27d0d5dffb5af",
-        "name": "code",
-        "kind": "folder",
-        "children": [
-          {
-            "id": "code:dd9c8c4d1a38aac4a21f",
-            "name": "test",
-            "title": "test",
-            "kind": "code",
-            "authors": "",
-            "abstract": "Test repo with code",
-            "access": "external",
-            "sourceUrl": "https://github.com/olesyander/test-repo",
-            "openUrl": "https://github.com/olesyander/test-repo",
-            "sourceType": "Repository",
-            "downloadUrl": null
-          }
-        ]
-      },
       {
         "id": "folder:58a9d5f10f7fd80c5a97",
         "name": "Dynamics",
@@ -413,5 +393,26 @@
       }
     ]
   },
-  "count": 23
+  "count": 23,
+  "codeTree": {
+    "id": "folder:21fad8f27d0d5dffb5af",
+    "name": "code",
+    "kind": "folder",
+    "children": [
+      {
+        "id": "code:dd9c8c4d1a38aac4a21f",
+        "name": "test",
+        "title": "test",
+        "kind": "code",
+        "authors": "",
+        "abstract": "Test repo with code",
+        "access": "external",
+        "sourceUrl": "https://github.com/olesyander/test-repo",
+        "openUrl": "https://github.com/olesyander/test-repo",
+        "sourceType": "Repository",
+        "downloadUrl": null
+      }
+    ],
+    "rootType": "code"
+  }
 }
