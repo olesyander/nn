@@ -296,7 +296,7 @@
       root = d3.hierarchy(trees.length > 1
         ? { id: 'virtual-root', kind: 'virtual', name: '', children: trees }
         : data.tree);
-      const mapTitle = String(data.title || data.tree?.name || 'disorder map').trim();
+      const mapTitle = String(data.title || data.tree?.name || 'NeuralNetworks map').trim();
       document.title = mapTitle;
       const brand = $('brand');
       if (brand && mapTitle) {
