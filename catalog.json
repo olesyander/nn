@@ -6,35 +6,59 @@
     "kind": "folder",
     "children": [
       {
+        "id": "folder:21fad8f27d0d5dffb5af",
+        "name": "code",
+        "kind": "folder",
+        "children": [
+          {
+            "id": "code:dd9c8c4d1a38aac4a21f",
+            "name": "test",
+            "title": "test",
+            "kind": "code",
+            "authors": "",
+            "abstract": "Test repo with code",
+            "access": "external",
+            "sourceUrl": "https://github.com/olesyander/test-repo",
+            "openUrl": "https://github.com/olesyander/test-repo",
+            "sourceType": "Repository",
+            "downloadUrl": null
+          }
+        ]
+      },
+      {
         "id": "folder:58a9d5f10f7fd80c5a97",
         "name": "Dynamics",
         "kind": "folder",
         "children": [
           {
-            "id": "1632845bce525c68",
+            "id": "1632845bce525c687f9e",
             "name": "Broken Ergodicity and the Violation of the Fluctuation-Dissipation Theorem Lead to Generalization Beyond Overfitting in Machine Learning",
             "title": "Broken Ergodicity and the Violation of the Fluctuation-Dissipation Theorem Lead to Generalization Beyond Overfitting in Machine Learning",
-            "authors": "Chan Li; Nigel Goldenfeld",
-            "abstract": "",
+            "authors": "Chan Li, Nigel Goldenfeld",
+            "abstract": "The remarkable ability of modern neural networks to generalize improves with increasing network capacity, even when the number of model parameters or effective degrees of freedom exceeds the number of training data points. This phenomenon is all the more surprising given that generalization error diverges when the number of model parameters approaches a critical value from below. Here we use dynamical mean field theory to show that this so-called \"double descent\" behavior is the outcome of a phase transition in the stochastic field theory describing the training process. We calculate the critical exponents and scaling function of the double descent phase transition, and show that it is marked by a breakdown of the fluctuation-dissipation theorem associated with broken ergodicity. The corresponding response function has the same functional form as the simple London model of the superconducting transition, with the rigidity of the wave function corresponding to the neural network's ability to generalize accurately.",
             "kind": "article",
-            "access": "download",
+            "access": "external",
             "sourceUrl": "https://arxiv.org/abs/2607.04135",
             "sourceType": "arXiv",
-            "downloadUrl": "papers/1632845bce525c68.pdf",
-            "originalFilename": "2607.04135v1.pdf"
+            "openUrl": "https://arxiv.org/pdf/2607.04135",
+            "downloadUrl": null,
+            "originalFilename": "2607.04135v1.pdf",
+            "needsReview": false
           },
           {
-            "id": "e1fab0ff7bc6ed18",
+            "id": "e1fab0ff7bc6ed184ef8",
             "name": "Relaxation speed in quenched-random force fields",
             "title": "Relaxation speed in quenched-random force fields",
-            "authors": "Jan Meibohm; Sabine H. L. Klapp",
-            "abstract": "",
+            "authors": "Jan Meibohm, Sabine H. L. Klapp",
+            "abstract": "Disorder is commonly expected to slow down relaxation, as in glasses and disordered magnets. Here we show that this need not be the case in general, by analysing the asymptotic relaxation rate of a Brownian particle in a harmonic background potential and a quenched-random Gaussian force field with conservative and non-conservative components. Combining weak-disorder perturbation theory, random-matrix theory, and numerical solutions of the Fokker-Planck equation, we show that the outcome depends on the geometry of the background and on the properties of the random forces. We identify two distinct mechanisms that shape the relaxation speed: an effective stiffening of the background by the disorder, as previously reported in one dimension, and interactions (repulsive and attractive) between the levels of the Fokker-Planck operator. Through level attraction, a common feature of non-Hermitian operators, non-conservative driving forces pull the slowest mode towards faster ones, which facilitates faster relaxation. In anisotropic backgrounds, both effects occur at second order in the disorder strength, enabling either slower or faster relaxation. In isotropic backgrounds, level interactions dominate and the disorder affects the degenerate slowest mode already at first order. The shift is then given by the left-most eigenvalue of a Gaussian random matrix and relaxation is generically slowed down. In backgrounds whose anisotropy is comparable to the disorder strength, level attraction is most effective by merging the slowest mode wit",
             "kind": "article",
-            "access": "download",
+            "access": "external",
             "sourceUrl": "https://arxiv.org/abs/2610.41991",
             "sourceType": "arXiv",
-            "downloadUrl": "papers/e1fab0ff7bc6ed18.pdf",
-            "originalFilename": "2610.41991v1.pdf"
+            "openUrl": "https://arxiv.org/pdf/2610.41991",
+            "downloadUrl": null,
+            "originalFilename": "2610.41991v1.pdf",
+            "needsReview": false
           }
         ]
       },
@@ -44,43 +68,49 @@
         "kind": "folder",
         "children": [
           {
-            "id": "f25713f39b09a198",
-            "name": "Annals of Mathematics Studies",
-            "title": "Annals of Mathematics Studies",
-            "authors": "Number",
+            "id": "f25713f39b09a198765f",
+            "name": "gerald-b-folland-harmonic-analysis-in-phase-space-am",
+            "title": "gerald-b-folland-harmonic-analysis-in-phase-space-am",
+            "authors": "",
             "abstract": "",
             "kind": "article",
-            "access": "download",
+            "access": "open",
             "sourceUrl": null,
             "sourceType": null,
-            "downloadUrl": "papers/f25713f39b09a198.pdf",
-            "originalFilename": "gerald-b-folland-harmonic-analysis-in-phase-space-am.pdf"
+            "openUrl": "papers/f25713f39b09a198765f.pdf",
+            "downloadUrl": "papers/f25713f39b09a198765f.pdf",
+            "originalFilename": "gerald-b-folland-harmonic-analysis-in-phase-space-am.pdf",
+            "needsReview": false
           },
           {
-            "id": "479afc99041bd98f",
+            "id": "479afc99041bd98f2c3c",
             "name": "Operator ordering schemes and covariant path integrals of quantum and stochastic processes in Curved space",
             "title": "Operator ordering schemes and covariant path integrals of quantum and stochastic processes in Curved space",
-            "authors": "Institut fiir Theoretische Physik der UniversitM, Stuttgart,",
+            "authors": "U. Weiss",
             "abstract": "",
             "kind": "article",
-            "access": "download",
-            "sourceUrl": null,
-            "sourceType": null,
-            "downloadUrl": "papers/479afc99041bd98f.pdf",
-            "originalFilename": "u-weiss-operator-ordering-schemes-and-covariant-path.pdf"
+            "access": "open",
+            "sourceUrl": "https://doi.org/10.1007/bf01321096",
+            "sourceType": "DOI",
+            "openUrl": "papers/479afc99041bd98f2c3c.pdf",
+            "downloadUrl": "papers/479afc99041bd98f2c3c.pdf",
+            "originalFilename": "u-weiss-operator-ordering-schemes-and-covariant-path.pdf",
+            "needsReview": false
           },
           {
-            "id": "023abf3e13d47c00",
+            "id": "023abf3e13d47c00b0ea",
             "name": "Методы некоммутативного анализа Пер с англ авт Назайкинский В Е",
             "title": "Методы некоммутативного анализа Пер с англ авт Назайкинский В Е",
             "authors": "",
             "abstract": "",
             "kind": "article",
-            "access": "download",
+            "access": "open",
             "sourceUrl": null,
             "sourceType": null,
-            "downloadUrl": "papers/023abf3e13d47c00.pdf",
-            "originalFilename": "Методы_некоммутативного_анализа_Пер_с_англ_авт_Назайкинский_В_Е.pdf"
+            "openUrl": "papers/023abf3e13d47c00b0ea.pdf",
+            "downloadUrl": "papers/023abf3e13d47c00b0ea.pdf",
+            "originalFilename": "Методы_некоммутативного_анализа_Пер_с_англ_авт_Назайкинский_В_Е.pdf",
+            "needsReview": false
           }
         ]
       },
@@ -90,17 +120,19 @@
         "kind": "folder",
         "children": [
           {
-            "id": "56fa3d23d3cc781a",
+            "id": "56fa3d23d3cc781ae758",
             "name": "Normalizing Flows and the Real-Time Sign Problem",
             "title": "Normalizing Flows and the Real-Time Sign Problem",
-            "authors": "Scott Lawrence, and Yukari Yamauchi,",
-            "abstract": "",
+            "authors": "Scott Lawrence, Yukari Yamauchi",
+            "abstract": "Normalizing flows have recently been applied to the problem of accelerating Markov chains in lattice field theory. We propose a generalization of normalizing flows that allows them to applied to theories with a sign problem. These complex normalizing flows are closely related to contour deformations (i.e. the generalized Lefschetz thimble method), which been applied to sign problems in the past. We discuss the question of the existence of normalizing flows: they do not exist in the most general case, but we argue that exact normalizing flows are likely to exist for many physically interesting problems, including cases where the Lefschetz thimble decomposition has an intractable sign problem. Finally, normalizing flows can be constructed in perturbation theory. We give numerical results on their effectiveness across a range of couplings for the Schwinger-Keldysh sign problem associated to a real scalar field in $0+1$ dimensions.",
             "kind": "article",
-            "access": "download",
+            "access": "external",
             "sourceUrl": "https://arxiv.org/abs/2101.05755",
             "sourceType": "arXiv",
-            "downloadUrl": "papers/56fa3d23d3cc781a.pdf",
-            "originalFilename": "2101.05755v5.pdf"
+            "openUrl": "https://arxiv.org/pdf/2101.05755",
+            "downloadUrl": null,
+            "originalFilename": "2101.05755v5.pdf",
+            "needsReview": false
           }
         ]
       },
@@ -110,30 +142,34 @@
         "kind": "folder",
         "children": [
           {
-            "id": "abe8d5404ad5d857",
-            "name": "RANDOM MATRICES",
-            "title": "RANDOM MATRICES",
-            "authors": "S.ii.iHuipciharlsliaal ВStreet,Suite",
+            "id": "abe8d5404ad5d8577567",
+            "name": "SacayGif-sur-Yvette,France",
+            "title": "SacayGif-sur-Yvette,France",
+            "authors": "",
             "abstract": "",
             "kind": "article",
-            "access": "download",
+            "access": "open",
             "sourceUrl": null,
             "sourceType": null,
-            "downloadUrl": "papers/abe8d5404ad5d857.pdf",
-            "originalFilename": "mehta.pdf"
+            "openUrl": "papers/abe8d5404ad5d8577567.pdf",
+            "downloadUrl": "papers/abe8d5404ad5d8577567.pdf",
+            "originalFilename": "mehta.pdf",
+            "needsReview": false
           },
           {
-            "id": "27edd3f08492f6bc",
+            "id": "27edd3f08492f6bc5e5b",
             "name": "Мультипликативная эргодическая теорема",
             "title": "Мультипликативная эргодическая теорема",
-            "authors": "ХАРАКТЕРИСТИЧЕСКИЕ ПОКАЗАТЕЛИ ЛЯПУНОВА",
+            "authors": "",
             "abstract": "",
             "kind": "article",
-            "access": "download",
+            "access": "open",
             "sourceUrl": null,
             "sourceType": null,
-            "downloadUrl": "papers/27edd3f08492f6bc.pdf",
-            "originalFilename": "Мультипликативная эргодическая теорема.pdf"
+            "openUrl": "papers/27edd3f08492f6bc5e5b.pdf",
+            "downloadUrl": "papers/27edd3f08492f6bc5e5b.pdf",
+            "originalFilename": "Мультипликативная эргодическая теорема.pdf",
+            "needsReview": false
           }
         ]
       },
@@ -143,108 +179,124 @@
         "kind": "folder",
         "children": [
           {
-            "id": "57a898a6c4093d9b",
-            "name": "A Perturbative Analysis of Stochastic Descent",
-            "title": "A Perturbative Analysis of Stochastic Descent",
-            "authors": "in Partial Fulfillment of the Requirements",
-            "abstract": "We analyze stochastic gradient descent (SGD) at small learning rates. Unlike prior analyses based on stochastic differential equations, our theory models discrete time and hence non-Gaussian noise. We illustrate our theory by discussing four of its corollaries: we (A) generalize the Akaike information criterion (AIC) to a smooth estimator of overfitting, hence enabling gradient-based model selection; (B) show how non-stochastic GD with a modified loss function may emulate SGD; (C) prove that gradient noise systematically pushes SGD toward flatter minima; and (D) characterize when and why flat minima overfit less than other minima. Thesis Supervisor: Joshua B. Tenenbaum Title: Professor of Brain and Cognitive Sciences 3",
-            "kind": "article",
-            "access": "download",
-            "sourceUrl": null,
-            "sourceType": null,
-            "downloadUrl": "papers/57a898a6c4093d9b.pdf",
-            "originalFilename": "1227278188-MIT.pdf"
-          },
-          {
-            "id": "c5e8ee038b363e3a",
-            "name": "On the Trajectories of SGD Without Replacement",
-            "title": "On the Trajectories of SGD Without Replacement",
-            "authors": "Pierfrancesco Beneventano pierb@princeton.edu",
-            "abstract": "This article examines the implicit regularization effect of Stochastic Gradient Descent (SGD). We consider the case of SGD without replacement, the variant typically used to2024 optimize large-scale neural networks. We analyze this algorithm in a more realistic regime than typically considered in theoretical works on SGD, as, e.g., we allow the product of the learning rate and Hessian to be O(1) and we do not specify any model architecture,Apr learning task, or loss (objective) function. Our core theoretical result is that optimizing with SGD without replacement is locally 20 equivalent to making an additional step on a novel regularizer. This implies that the ex- pected trajectories of SGD without replacement can be decoupled in (i) following SGD with replacement (in which batches are sampled i.i.d.) along the directions of high curvature, and (ii) regularizing the trace of the noise covariance along the flat ones. As a consequence, SGD without replacement travels flat areas and may escape saddles significantly faster than SGD with replacement. On several vision tasks, the novel regu-[cs.LG] larizer penalizes a weighted trace of the Fisher Matrix, thus encouraging sparsity in the spectrum of the Hessian of the loss in line with empirical observations from prior work. We also propose an explanation for why SGD does not train at the edge of stability (as opposed to GD).",
-            "kind": "article",
-            "access": "download",
-            "sourceUrl": "https://arxiv.org/abs/2312.16143",
-            "sourceType": "arXiv",
-            "downloadUrl": "papers/c5e8ee038b363e3a.pdf",
-            "originalFilename": "2312.16143v2.pdf"
-          },
-          {
-            "id": "e3d8c3501899e3dd",
-            "name": "Published as a conference paper at ICLR 2019",
-            "title": "Published as a conference paper at ICLR 2019",
-            "authors": "FLUCTUATION-DISSIPATION RELATIONS FOR",
-            "abstract": "2018 The notion of the stationary equilibrium ensemble has played a central role in statistical mechanics. In machine learning as well, training serves as generalized equilibration that drives the probability distribution of model parameters towardDec stationarity. Here, we derive stationary fluctuation-dissipation relations that link 21 measurablegorithm. Thesequantitiesrelationsandholdhyperparametersexactly for anyinstationarythe stochasticstate andgradientcan indescentparticularal- be used to adaptively set training schedule. We can further use the relations to efficiently extract information pertaining to a loss-function landscape such as the magnitudes of its Hessian and anharmonicity. Our claims are empirically verified.",
-            "kind": "article",
-            "access": "download",
-            "sourceUrl": "https://arxiv.org/abs/1810.00004",
-            "sourceType": "arXiv",
-            "downloadUrl": "papers/e3d8c3501899e3dd.pdf",
-            "originalFilename": "1810.00004v2.pdf"
-          },
-          {
-            "id": "5952814f64de9df9",
-            "name": "Stochastic Gradient Langevin Dynamics Based on",
-            "title": "Stochastic Gradient Langevin Dynamics Based on",
-            "authors": "Quantization with Increasing Resolution",
-            "abstract": "Stochastic learning dynamics based on Langevin or Levy stochastic differential[cs.LG] equations (SDEs) in deep neural networks control the variance of noise by varying the size of the mini-batch or directly those of injecting noise. Since the noise variance affects the approximation performance, the design of the additive noise is significant in SDE-based learning and practical implementation. In this paper, we propose an alternative stochastic descent learning equation based on quantized optimization for non-convex objective functions, adopting a stochastic analysis perspective. The proposed method employs a quantized optimization approach that utilizes Langevin SDE dynamics, allowing for controllable noise with an identical distribution without the need for additive noise or adjusting the mini-batch size. Numerical experiments demonstrate the effectiveness of the proposed algorithm on vanilla convolution neural network(CNN) models and the ResNet-50 architecture across various data sets. Furthermore, we provide a simple PyTorch implementation of the proposed algorithm.arXiv:2305.18864v2 1 Introduction Stochastic analysis for a learning equation based on stochastic gradient descent (SGD) with a finite or an infinitesimal learning rate has been an essential research topic to improve machine learning performance. Particularly, the linear scaling rule(LSR) for SGD discovered by Krizhevsky [2014], Chaudhari and Soatto [2018] and Goyal et al. [2018] independently provides an essential guide to select or control the learning rate corresponding to the size of the mini-batch.…",
-            "kind": "article",
-            "access": "download",
-            "sourceUrl": "https://arxiv.org/abs/2305.18864",
-            "sourceType": "arXiv",
-            "downloadUrl": "papers/5952814f64de9df9.pdf",
-            "originalFilename": "2305.18864v2.pdf"
-          },
-          {
-            "id": "328a7ad2f2fb5249",
-            "name": "Stochastic learning flow: moment equations for stochastic gradient descent at finite step size",
-            "title": "Stochastic learning flow: moment equations for stochastic gradient descent at finite step size",
-            "authors": "Christian Schmid; James M Murray",
+            "id": "57a898a6c4093d9bd4d8",
+            "name": "1227278188-MIT",
+            "title": "1227278188-MIT",
+            "authors": "",
             "abstract": "",
             "kind": "article",
-            "access": "download",
-            "sourceUrl": "https://arxiv.org/abs/2611.00473",
-            "sourceType": "arXiv",
-            "downloadUrl": "papers/328a7ad2f2fb5249.pdf",
-            "originalFilename": "2611.00473v1.pdf"
+            "access": "open",
+            "sourceUrl": null,
+            "sourceType": null,
+            "openUrl": "papers/57a898a6c4093d9bd4d8.pdf",
+            "downloadUrl": "papers/57a898a6c4093d9bd4d8.pdf",
+            "originalFilename": "1227278188-MIT.pdf",
+            "needsReview": true
           },
           {
-            "id": "8b9302d041fe4790",
-            "name": "Stochastic Modified Equations and Dynamics of Stochastic",
-            "title": "Stochastic Modified Equations and Dynamics of Stochastic",
-            "authors": "Gradient Algorithms I: Mathematical Foundations",
+            "id": "8b9302d041fe4790ec4d",
+            "name": "Journal of Machine Learning Research 20 (2019) 1-47 Submitted 9/17; Revised 2/19; Published 3/19",
+            "title": "Journal of Machine Learning Research 20 (2019) 1-47 Submitted 9/17; Revised 2/19; Published 3/19",
+            "authors": "",
             "abstract": "We develop the mathematical foundations of the stochastic modified equations (SME) framework for analyzing the dynamics of stochastic gradient algorithms, where the latter is approximated by a class of stochastic differential equations with small noise param- eters. We prove that this approximation can be understood mathematically as an weak approximation, which leads to a number of precise and useful results on the approximations of stochastic gradient descent (SGD), momentum SGD and stochastic Nesterov’s acceler- ated gradient method in the general setting of stochastic objectives. We also demonstrate through explicit calculations that this continuous-time approach can uncover important analytical insights into the stochastic gradient algorithms under consideration that may not be easy to obtain in a purely discrete-time setting.",
             "kind": "article",
-            "access": "download",
+            "access": "open",
             "sourceUrl": null,
             "sourceType": null,
-            "downloadUrl": "papers/8b9302d041fe4790.pdf",
-            "originalFilename": "17-526.pdf"
+            "openUrl": "papers/8b9302d041fe4790ec4d.pdf",
+            "downloadUrl": "papers/8b9302d041fe4790ec4d.pdf",
+            "originalFilename": "17-526.pdf",
+            "needsReview": false
           },
           {
-            "id": "b082f4948d1209a6",
+            "id": "c5e8ee038b363e3a747e",
+            "name": "On the Trajectories of SGD Without Replacement",
+            "title": "On the Trajectories of SGD Without Replacement",
+            "authors": "Pierfrancesco Beneventano",
+            "abstract": "This article examines the implicit regularization effect of Stochastic Gradient Descent (SGD). We consider the case of SGD without replacement, the variant typically used to optimize large-scale neural networks. We analyze this algorithm in a more realistic regime than typically considered in theoretical works on SGD, as, e.g., we allow the product of the learning rate and Hessian to be $O(1)$ and we do not specify any model architecture, learning task, or loss (objective) function. Our core theoretical result is that optimizing with SGD without replacement is locally equivalent to making an additional step on a novel regularizer. This implies that the expected trajectories of SGD without replacement can be decoupled in (i) following SGD with replacement (in which batches are sampled i.i.d.) along the directions of high curvature, and (ii) regularizing the trace of the noise covariance along the flat ones. As a consequence, SGD without replacement travels flat areas and may escape saddles significantly faster than SGD with replacement. On several vision tasks, the novel regularizer penalizes a weighted trace of the Fisher Matrix, thus encouraging sparsity in the spectrum of the Hessian of the loss in line with empirical observations from prior work. We also propose an explanation for why SGD does not train at the edge of stability (as opposed to GD).",
+            "kind": "article",
+            "access": "external",
+            "sourceUrl": "https://arxiv.org/abs/2312.16143",
+            "sourceType": "arXiv",
+            "openUrl": "https://arxiv.org/pdf/2312.16143",
+            "downloadUrl": null,
+            "originalFilename": "2312.16143v2.pdf",
+            "needsReview": false
+          },
+          {
+            "id": "e3d8c3501899e3ddd3ca",
+            "name": "Published as a conference paper at ICLR 2019",
+            "title": "Published as a conference paper at ICLR 2019",
+            "authors": "",
+            "abstract": "2018 The notion of the stationary equilibrium ensemble has played a central role in statistical mechanics. In machine learning as well, training serves as generalized equilibration that drives the probability distribution of model parameters towardDec stationarity. Here, we derive stationary fluctuation-dissipation relations that link 21 measurablegorithm. Thesequantitiesrelationsandholdhyperparametersexactly for anyinstationarythe stochasticstate andgradientcan indescentparticularal- be used to adaptively set training schedule. We can further use the relations to efficiently extract information pertaining to a loss-function landscape such as the magnitudes of its Hessian and anharmonicity. Our claims are empirically verified.",
+            "kind": "article",
+            "access": "open",
+            "sourceUrl": null,
+            "sourceType": null,
+            "openUrl": "papers/e3d8c3501899e3ddd3ca.pdf",
+            "downloadUrl": "papers/e3d8c3501899e3ddd3ca.pdf",
+            "originalFilename": "1810.00004v2.pdf",
+            "needsReview": false
+          },
+          {
+            "id": "5952814f64de9df9229d",
+            "name": "Stochastic Gradient Langevin Dynamics Based on Quantization with Increasing Resolution",
+            "title": "Stochastic Gradient Langevin Dynamics Based on Quantization with Increasing Resolution",
+            "authors": "JInwuk Seok, Changsik Cho",
+            "abstract": "Stochastic learning dynamics based on Langevin or Levy stochastic differential equations (SDEs) in deep neural networks control the variance of noise by varying the size of the mini-batch or directly those of injecting noise. Since the noise variance affects the approximation performance, the design of the additive noise is significant in SDE-based learning and practical implementation. In this paper, we propose an alternative stochastic descent learning equation based on quantized optimization for non-convex objective functions, adopting a stochastic analysis perspective. The proposed method employs a quantized optimization approach that utilizes Langevin SDE dynamics, allowing for controllable noise with an identical distribution without the need for additive noise or adjusting the mini-batch size. Numerical experiments demonstrate the effectiveness of the proposed algorithm on vanilla convolution neural network(CNN) models and the ResNet-50 architecture across various data sets. Furthermore, we provide a simple PyTorch implementation of the proposed algorithm.",
+            "kind": "article",
+            "access": "external",
+            "sourceUrl": "https://arxiv.org/abs/2305.18864",
+            "sourceType": "arXiv",
+            "openUrl": "https://arxiv.org/pdf/2305.18864",
+            "downloadUrl": null,
+            "originalFilename": "2305.18864v2.pdf",
+            "needsReview": false
+          },
+          {
+            "id": "328a7ad2f2fb52493a69",
+            "name": "Stochastic learning flow: moment equations for stochastic gradient descent at finite step size",
+            "title": "Stochastic learning flow: moment equations for stochastic gradient descent at finite step size",
+            "authors": "Christian Schmid, James M Murray",
+            "abstract": "Analytical theories of learning in deep networks often assume gradient flow, discarding the finite step size and batch noise of stochastic gradient descent (SGD). Starting from the discrete update, we derive continuous-time equations for the mean and covariance of the parameter distribution under a Gaussian closure for a general stochastic learning, to first order in the learning rate $η$. Applying these stochastic learning flow (SLF) equations to SGD, we show that the mean descends an effective loss regularized by the covariance and loss curvature, while the covariance, unlike in stochastic differential equation approximations, becomes unstable at curvature $2/η$. In SGD ensembles of linear and nonlinear networks, SLF predicts learning curves and mean trajectories more accurately than gradient flow and captures the covariance dynamics, failing where the parameter distribution becomes strongly non-Gaussian. In the full-batch limit, the edge of stability corresponds to a stationary point of the coupled sharpness-covariance dynamics, recovering self-stabilization and central flow, and batch-to-batch curvature fluctuations lower this threshold under SGD.",
+            "kind": "article",
+            "access": "external",
+            "sourceUrl": "https://arxiv.org/abs/2611.00473",
+            "sourceType": "arXiv",
+            "openUrl": "https://arxiv.org/pdf/2611.00473",
+            "downloadUrl": null,
+            "originalFilename": "2611.00473v1.pdf",
+            "needsReview": false
+          },
+          {
+            "id": "b082f4948d1209a63926",
             "name": "The global convergence time of stochastic gradient descent in non-convex landscapes: Sharp estimates via large deviations",
             "title": "The global convergence time of stochastic gradient descent in non-convex landscapes: Sharp estimates via large deviations",
-            "authors": "Waïss Azizian; Franck Iutzeler; Jérôme Malick; Panayotis Mertikopoulos",
-            "abstract": "In this paper, we examine the time it takes for stochastic gradient descent (SGD) to reach the global minimum of a general, non-convex loss function. We approach this question through the lens of randomly perturbed dynamical systems and large2025 deviations theory, and we provide a tight characterization of the global convergence time of SGD via matching upper and lower bounds. These bounds are dominated by the most “costly” set of obstacles that the algorithm may need to overcome in order to reach aJun global minimizer from a given initialization, coupling in this way the global geometry of 7 the underlying loss landscape with the statistics of the noise entering the process. Finally, motivated by applications to the training of deep neural networks, we also provide a series of refinements and extensions of our analysis for loss functions with shallow local minima.",
+            "authors": "Waïss Azizian, Franck Iutzeler, Jérôme Malick, Panayotis Mertikopoulos",
+            "abstract": "In this paper, we examine the time it takes for stochastic gradient descent (SGD) to reach the global minimum of a general, non-convex loss function. We approach this question through the lens of randomly perturbed dynamical systems and large deviations theory, and we provide a tight characterization of the global convergence time of SGD via matching upper and lower bounds. These bounds are dominated by the most \"costly\" set of obstacles that the algorithm may need to overcome in order to reach a global minimizer from a given initialization, coupling in this way the global geometry of the underlying loss landscape with the statistics of the noise entering the process. Finally, motivated by applications to the training of deep neural networks, we also provide a series of refinements and extensions of our analysis for loss functions with shallow local minima.",
             "kind": "article",
-            "access": "download",
+            "access": "external",
             "sourceUrl": "https://arxiv.org/abs/2503.16398",
             "sourceType": "arXiv",
-            "downloadUrl": "papers/b082f4948d1209a6.pdf",
-            "originalFilename": "2503.16398v2.pdf"
+            "openUrl": "https://arxiv.org/pdf/2503.16398",
+            "downloadUrl": null,
+            "originalFilename": "2503.16398v2.pdf",
+            "needsReview": false
           },
           {
-            "id": "ecb52ce42202e1cc",
+            "id": "ecb52ce42202e1cca401",
             "name": "Why SGD is not Brownian Motion: A New Perspective on Stochastic Dynamics",
             "title": "Why SGD is not Brownian Motion: A New Perspective on Stochastic Dynamics",
-            "authors": "Igor Ignashin, Anna Radovskaya,, Andrew Semenov,, Egor Lopatin, Stanislav Ole-",
-            "abstract": "",
+            "authors": "Igor Ignashin, Anna Radovskaya, Andrew Semenov, Egor Lopatin, Stanislav Potapov, Aleksandr Kovalenko, Andrey Veprikov, Aleksandr Shestakov, Andrey Leonidov, Aleksandr Beznosikov",
+            "abstract": "Stochastic Gradient Descent (SGD) is commonly modeled as a Langevin process, assuming that minibatch noise acts as Brownian motion. However, this approximation relies on a continuous-time limit and a sqrt(eta) noise scaling that does not match the discrete SGD update at finite learning rate. In this work, we propose an alternative formulation of SGD as deterministic dynamics in a fluctuating loss landscape induced by minibatch sampling. Starting directly from the discrete update, we derive a master equation for the parameter distribution and obtain a discrete Fokker--Planck equation that differs from the standard Langevin form at order eta^2. Using this framework, we analyze SGD dynamics near critical points of the loss. We show that the behavior decomposes along the eigenbasis of the mean Hessian into qualitatively distinct regimes. In particular, nearly-flat directions do not admit a stationary distribution: the variance grows over time, corresponding to effective diffusion along valleys with a coefficient proportional to the learning rate. We provide empirical evidence supporting these predictions on neural network models in computer vision and natural language processing, observing a clear qualitative separation between confined and diffusive modes.",
             "kind": "article",
-            "access": "download",
+            "access": "external",
             "sourceUrl": "https://arxiv.org/abs/2605.22644",
             "sourceType": "arXiv",
-            "downloadUrl": "papers/ecb52ce42202e1cc.pdf",
-            "originalFilename": "2605.22644v1.pdf"
+            "openUrl": "https://arxiv.org/pdf/2605.22644",
+            "downloadUrl": null,
+            "originalFilename": "2605.22644v1.pdf",
+            "needsReview": false
           }
         ]
       },
@@ -254,43 +306,49 @@
         "kind": "folder",
         "children": [
           {
-            "id": "5878baf159b97013",
-            "name": "&('*),+.-(/10324-527698;:<67=>&?+<@3AB=>C<&D:FE5'*69&(-,GD27)3).HIA",
-            "title": "&('*),+.-(/10324-527698;:<67=>&?+<@3AB=>C<&D:FE5'*69&(-,GD27)3).HIA",
-            "authors": "OQP OSRBTVUXW Y[Z \\^]",
-            "abstract": "",
-            "kind": "article",
-            "access": "download",
-            "sourceUrl": null,
-            "sourceType": null,
-            "downloadUrl": "papers/5878baf159b97013.pdf",
-            "originalFilename": "s17-229.pdf"
-          },
-          {
-            "id": "df3e98014113c3cf",
+            "id": "df3e98014113c3cf81e3",
             "name": "Introduction to Supersymmetric Theory of Stochastics",
             "title": "Introduction to Supersymmetric Theory of Stochastics",
-            "authors": "Many natural and engineered dynamical systems, including all living objects, exhibit signatures",
-            "abstract": "",
+            "authors": "Igor V. Ovchinnikov",
+            "abstract": "Many natural and engineered dynamical systems, including all living objects, exhibit signatures of what can be called spontaneous dynamical long-range order (DLRO). This order's omnipresence has long been recognized by the scientific community, as evidenced by a myriad of related concepts, theoretical and phenomenological frameworks, and experimental phenomena such as turbulence, $1/f$ noise, dynamical complexity, chaos and the butterfly effect, the Richter scale for earthquakes and the scale-free statistics of other sudden processes, self-organization and pattern formation, self-organized criticality, etc. Although several successful approaches to various realizations of DLRO have been established, the universal theoretical understanding of this phenomenon remained elusive. The possibility of constructing a unified theory of DLRO has emerged recently within the approximation-free supersymmetric theory of stochastics (STS). There, DLRO is the spontaneous breakdown of the topological or de Rham supersymmetry that all stochastic differential equations (SDEs) possess. This theory may be interesting to researchers with very different backgrounds because the ubiquitous DLRO is a truly interdisciplinary entity. The STS is also an interdisciplinary construction. This theory is based on dynamical systems theory, cohomological field theories, the theory of pseudo-Hermitian operators, and the conventional theory of SDEs. Reviewing the literature on all these mathematical disciplines can be time-consuming. As such, a concise and self-c",
             "kind": "article",
-            "access": "download",
+            "access": "external",
             "sourceUrl": "https://arxiv.org/abs/1511.03393",
             "sourceType": "arXiv",
-            "downloadUrl": "papers/df3e98014113c3cf.pdf",
-            "originalFilename": "1511.03393v4.pdf"
+            "openUrl": "https://arxiv.org/pdf/1511.03393",
+            "downloadUrl": null,
+            "originalFilename": "1511.03393v4.pdf",
+            "needsReview": false
           },
           {
-            "id": "bc96386905ac7b12",
+            "id": "bc96386905ac7b124db2",
             "name": "Path integrals and stochastic calculus",
             "title": "Path integrals and stochastic calculus",
-            "authors": "Vivien Lecomted and Fr ́ed ́eric van Wijlande",
-            "abstract": "",
+            "authors": "Thibaut Arnoulx de Pirey, Leticia F. Cugliandolo, Vivien Lecomte, Frédéric van Wijland",
+            "abstract": "Path integrals are a ubiquitous tool in theoretical physics. However, their use is sometimes hindered by the lack of control on various manipulations -- such as performing a change of the integration path -- one would like to carry out in the light-hearted fashion that physicists enjoy. Similar issues arise in the field of stochastic calculus, which we review to prepare the ground for a proper construction of path integrals. At the level of path integration, and in arbitrary space dimension, we not only report on existing Riemannian geometry-based approaches that render path integrals amenable to the standard rules of calculus, but also bring forth new routes, based on a fully time-discretized approach, that achieve the same goal. We illustrate these various definitions of path integration on simple examples such as the diffusion of a particle on a sphere.",
             "kind": "article",
-            "access": "download",
+            "access": "external",
             "sourceUrl": "https://arxiv.org/abs/2211.09470",
             "sourceType": "arXiv",
-            "downloadUrl": "papers/bc96386905ac7b12.pdf",
-            "originalFilename": "2211.09470v2.pdf"
+            "openUrl": "https://arxiv.org/pdf/2211.09470",
+            "downloadUrl": null,
+            "originalFilename": "2211.09470v2.pdf",
+            "needsReview": false
+          },
+          {
+            "id": "5878baf159b970138410",
+            "name": "Стохастические дифференциальные уравнения: теория и практика численного решения",
+            "title": "Стохастические дифференциальные уравнения: теория и практика численного решения",
+            "authors": "Д. Ф. Кузнецов",
+            "abstract": "",
+            "kind": "article",
+            "access": "open",
+            "sourceUrl": null,
+            "sourceType": null,
+            "openUrl": "papers/5878baf159b970138410.pdf",
+            "downloadUrl": "papers/5878baf159b970138410.pdf",
+            "originalFilename": "s17-229.pdf",
+            "needsReview": false
           }
         ]
       },
@@ -300,30 +358,34 @@
         "kind": "folder",
         "children": [
           {
-            "id": "88775d9344cdbe51",
-            "name": "Quantum Stochastic Gradient Descent in its",
-            "title": "Quantum Stochastic Gradient Descent in its",
-            "authors": "continuous-time limit based on the Wigner formulation of",
-            "abstract": "The main ideas behind a research plan to use the Wigner formulation as a bridge between classical and quantum probabilistic algorithms are presented, focusing on one particular case: the Quantum analog of Stochastic Gradient Descent in its continuous-time limit based on the Wigner formulation of Open Quantum Systems.",
+            "id": "b4db959f7c49c30fabf2",
+            "name": "arXiv:2407.15245v1 [math.OC] 21 Jul 2024",
+            "title": "arXiv:2407.15245v1 [math.OC] 21 Jul 2024",
+            "authors": "",
+            "abstract": "",
             "kind": "article",
-            "access": "download",
-            "sourceUrl": "https://arxiv.org/abs/2510.25910",
-            "sourceType": "arXiv",
-            "downloadUrl": "papers/88775d9344cdbe51.pdf",
-            "originalFilename": "2510.25910v1.pdf"
+            "access": "open",
+            "sourceUrl": null,
+            "sourceType": null,
+            "openUrl": "papers/b4db959f7c49c30fabf2.pdf",
+            "downloadUrl": "papers/b4db959f7c49c30fabf2.pdf",
+            "originalFilename": "2407.15245v1.pdf",
+            "needsReview": false
           },
           {
-            "id": "b4db959f7c49c30f",
-            "name": "Weyl Calculus and Exactly Solvable Schr ̈odinger Bridges",
-            "title": "Weyl Calculus and Exactly Solvable Schr ̈odinger Bridges",
-            "authors": "with Quadratic State Cost",
-            "abstract": "— Schr ̈odinger bridge–a stochastic dynamical gener- Weyl calculus tools with illustrative calculations. The recipe alization of optimal mass transport–exhibits a learning-control for finding the kernel that we exemplify, follows the path: duality. Viewed as a stochastic control problem, the Schr ̈odinger bridge finds an optimal control policy that steers a given joint PDE operator symbol state statistics to another while minimizing the total control −→Weyl −→Weyl −→kernel.2024 effort subject to controlled diffusion and deadline constraints. We explain the two middle ingredients: Weyl operator and Viewed as a stochastic learning problem, the Schr ̈odinger bridge finds the most-likely distribution-valued trajectory connecting symbol, and their connections with the familiar ends: PDEJul endpoint distributional observations, i.e., solves the two point and kernel. 21 boundary-constrainedmanifold of probabilitymaximumdistributions.likelihoodRecent worksproblemhaveovershownthe The technical motivation for this work came from solving the Schr ̈odinger bridge (SB) problems – a class of stochastic that solving the Schr ̈odinger bridge problem with state cost optimal control problems with deadline, controlled diffusion, requires finding the Markov kernel associated with a reaction- diffusion PDE where the state cost appears as a state-dependent and endpoint distribution constraints. Such problems and reaction rate. We explain how ideas from Weyl calculus in their solutions are finding use in stochastic control [7]–[15] quantum mechanics, specifically the Weyl operator and the and…",
+            "id": "88775d9344cdbe51bb5e",
+            "name": "Quantum Stochastic Gradient Descent in its",
+            "title": "Quantum Stochastic Gradient Descent in its",
+            "authors": "",
+            "abstract": "The main ideas behind a research plan to use the Wigner formulation as a bridge between classical and quantum probabilistic algorithms are presented, focusing on one particular case: the Quantum analog of Stochastic Gradient Descent in its continuous-time limit based on the Wigner formulation of Open Quantum Systems.",
             "kind": "article",
-            "access": "download",
-            "sourceUrl": "https://arxiv.org/abs/2407.15245",
-            "sourceType": "arXiv",
-            "downloadUrl": "papers/b4db959f7c49c30f.pdf",
-            "originalFilename": "2407.15245v1.pdf"
+            "access": "open",
+            "sourceUrl": null,
+            "sourceType": null,
+            "openUrl": "papers/88775d9344cdbe51bb5e.pdf",
+            "downloadUrl": "papers/88775d9344cdbe51bb5e.pdf",
+            "originalFilename": "2510.25910v1.pdf",
+            "needsReview": false
           }
         ]
       },
@@ -333,21 +395,23 @@
         "kind": "folder",
         "children": [
           {
-            "id": "a1d63b6c26ca6dee",
+            "id": "a1d63b6c26ca6dee1195",
             "name": "Машинное обучение — конспект пяти занятий",
             "title": "Машинное обучение — конспект пяти занятий",
             "authors": "По занятиям Никиты Волкова",
             "abstract": "",
             "kind": "article",
-            "access": "download",
+            "access": "open",
             "sourceUrl": null,
             "sourceType": null,
-            "downloadUrl": "papers/a1d63b6c26ca6dee.pdf",
-            "originalFilename": "ml-notes.pdf"
+            "openUrl": "papers/a1d63b6c26ca6dee1195.pdf",
+            "downloadUrl": "papers/a1d63b6c26ca6dee1195.pdf",
+            "originalFilename": "ml-notes.pdf",
+            "needsReview": false
           }
         ]
       }
     ]
   },
-  "count": 22
+  "count": 23
 }
