@@ -273,7 +273,7 @@
         hour: '2-digit',
         minute: '2-digit',
         hour12: false,
-        timeZone: 'Europe/Vilnius'
+        timeZone: 'Europe/Moscow'
       }) : '';
     const msg = String(release?.commit || '').slice(0, 150);
     status.textContent = [when && 'Last update: ' + when, msg].filter(Boolean).join(' · ') || 'Latest update';
