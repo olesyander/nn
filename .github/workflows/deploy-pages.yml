@@ -1,0 +1,48 @@
+name: Deploy research map
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout public site
+        uses: actions/checkout@v4
+      - name: Build static release metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+          cp index.html app.js style.css catalog.json _site/
+          touch _site/.nojekyll
+          if [[ -d papers ]]; then cp -a papers _site/papers; fi
+          if [[ -f changes.json ]]; then cp changes.json _site/changes.json; fi
+          python - <<'PY'
+          import json, pathlib, subprocess
+          date = subprocess.check_output(['git', 'log', '-1', '--format=%cI'], text=True).strip()
+          subject = subprocess.check_output(['git', 'log', '-1', '--format=%s'], text=True).strip()
+          pathlib.Path('_site/release.json').write_text(json.dumps({'date': date, 'commit': subject}, ensure_ascii=False))
+          PY
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy to Pages
+        uses: actions/deploy-pages@v4
+        id: deployment

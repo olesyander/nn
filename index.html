@@ -1,15 +1,13 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#0c0e12">
   <meta name="description" content="An interactive map of scientific literature.">
-  <title>Research map</title>
-  <link rel="stylesheet" href="./style.css?v=search-20261112-1">
+  <title>disorder map</title>
+  <link rel="stylesheet" href="./style.css?v=v3-20261113">
 </head>
-
 <body>
   <div class="shell">
     <header class="topbar">
@@ -17,21 +15,23 @@
       <div class="actions">
         <div class="search-wrap">
           <label class="sr-only" for="search-input">Search publications by title or author</label>
-          <input type="search" id="search-input" class="search-input" placeholder="Search title or author…"
-            aria-label="Search title or author" aria-controls="search-results" aria-expanded="false" autocomplete="off"
-            spellcheck="false">
-          <div id="search-results" class="search-results" role="listbox" aria-label="Matching publications" hidden>
-          </div>
+          <input type="search" id="search-input" class="search-input"
+            placeholder="Search title or author…" aria-label="Search title or author"
+            aria-controls="search-results" aria-expanded="false" autocomplete="off" spellcheck="false">
+          <div id="search-results" class="search-results" role="listbox" aria-label="Matching publications" hidden></div>
         </div>
         <button type="button" class="action" id="expand" aria-label="Expand all folders">Expand all</button>
         <button type="button" class="action" id="collapse" aria-label="Collapse all folders">Collapse all</button>
       </div>
     </header>
     <main class="canvas" id="canvas" aria-label="Interactive library tree">
-      <svg id="map" role="img"
-        aria-label="Topic folders and publications. Click folders to expand and articles to read their details."></svg>
+      <svg id="map" role="img" aria-label="Topic folders and publications. Click folders to expand and articles to read their details."></svg>
       <div id="message" class="message" hidden></div>
     </main>
+    <details class="release" id="release" aria-label="Latest update">
+      <summary id="update-summary">Latest update</summary>
+      <div id="update-changes" class="release-content"></div>
+    </details>
     <div id="overlay" class="overlay" aria-hidden="true"></div>
     <aside class="drawer" id="drawer" aria-label="Publication details" aria-hidden="true">
       <div class="drawer-header">
@@ -40,9 +40,9 @@
       </div>
       <div class="drawer-content">
         <h1 id="paper-title"></h1>
-        <div class="field-label">AUTHORS</div>
+        <div class="field-label" id="authors-label">AUTHORS</div>
         <p id="authors"></p>
-        <div class="field-label">ABSTRACT</div>
+        <div class="field-label" id="abstract-label">ABSTRACT</div>
         <p id="abstract"></p>
         <div id="access" class="access"></div>
         <div id="external" class="external"></div>
@@ -50,45 +50,6 @@
     </aside>
   </div>
   <script defer src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-  <script defer src="./app.js?v=search-20261112-1"></script>
-
-  <div id="last-commit" style="
-  position: fixed;
-  bottom: 12px;
-  right: 18px;
-  z-index: 1000;
-  color: #90aaca;
-  font: 12px system-ui;
-">
-    Last commit: loading...
-  </div>
-
-  <script>
-    async function showLastCommit() {
-      const url = "https://api.github.com/repos/olesyander/nn/commits/main";
-
-      try {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error("API error");
-
-        const data = await response.json();
-        const date = new Date(data.commit.committer.date);
-
-        document.getElementById("last-commit").textContent =
-          "Last commit: " + date.toLocaleDateString("en-GB", {
-            day: "2-digit",
-            month: "short",
-            year: "numeric"
-          });
-
-      } catch (error) {
-        document.getElementById("last-commit").textContent =
-          "Last commit: unavailable";
-      }
-    }
-
-    showLastCommit();
-  </script>
+  <script defer src="./app.js?v=v3-20261113"></script>
 </body>
-
 </html>

@@ -59,37 +59,49 @@
     container.append(view);
     return true;
   }
+  function safeUrl(value) {
+    try {
+      const u = new URL(String(value || ''), document.baseURI);
+      if (!['http:', 'https:'].includes(u.protocol)) return null;
+      return u.href;
+    } catch (_) { return null; }
+  }
+  function addOpenLink(container, label, url, className = 'download') {
+    const link = safeUrl(url);
+    if (!link) return;
+    const anchor = el('a', label);
+    anchor.href = link;
+    anchor.target = '_blank';
+    anchor.rel = 'noopener noreferrer';
+    anchor.className = className;
+    container.append(anchor);
+  }
   function detail(data) {
     selected = data.id;
     $('paper-title').textContent = data.title || data.name;
-    $('authors').textContent = data.authors || 'Not identified';
-    $('abstract').textContent = data.abstract || 'Abstract not available.';
-    $('type-label').textContent = data.kind === 'book' ? 'BOOK' : 'ARTICLE';
+    $('authors').textContent = data.authors || (data.kind === 'code' ? 'Repository' : 'Not identified');
+    $('abstract').textContent = data.abstract || (data.kind === 'code' ? 'Repository description not available.' : 'Abstract not available.');
+    $('type-label').textContent = data.kind === 'code' ? 'CODE' : data.kind === 'book' ? 'BOOK' : 'ARTICLE';
     const access = $('access'); access.replaceChildren();
     const ext = $('external'); ext.replaceChildren();
-    if (data.access === 'restricted') {
+    if (data.kind === 'code') {
+      access.append(el('strong', data.sourceUrl ? 'Source repository' : 'Repository URL missing'));
+      if (data.sourceUrl) addOpenLink(ext, 'Open repository', data.sourceUrl, '');
+      else access.append(el('div', 'Add repo.json to link this project.'));
+    } else if (data.access === 'restricted') {
       access.append(el('strong', 'Restricted access'));
-      access.append(el('div', 'This file is not available for public viewing or download.'));
-    } else if (data.downloadUrl) {
-      access.append(el('strong', 'Full text available'));
-      const fileUrl = './' + data.downloadUrl;
-      const isPdf = data.downloadUrl.toLowerCase().endsWith('.pdf');
-      // First button always leads outside the library to a publication page
-      // (DOI/arXiv) or, if unknown, a scholarly search by title.
-      addPublicationLink(ext, data);
-      // Second button downloads the file stored in the public repository.
-      const download = el('a', isPdf ? 'Download PDF' : 'Download file');
-      download.href = fileUrl;
-      download.setAttribute('download', data.originalFilename || '');
-      download.classList.add('download');
-      ext.append(download);
-    } else if (data.sourceUrl || data.title || data.name) {
-      access.append(el('strong', 'Read at source'));
-      addPublicationLink(ext, data);
+      access.append(el('div', 'This file is not publicly available.'));
     } else {
-      access.append(el('strong', 'File not publicly available'));
+      const hasFullText = Boolean(data.openUrl || data.downloadUrl);
+      access.append(el('strong', hasFullText ? 'Full text available' : 'Publication details'));
+      // Publication always opens arXiv/DOI/publisher, or a scholarly search.
+      addPublicationLink(ext, data);
+      // No forced download: open a PDF at arXiv or a local permitted copy in a new tab.
+      const fullUrl = data.openUrl || (data.downloadUrl ? './' + data.downloadUrl : '');
+      if (fullUrl) addOpenLink(ext, 'Open article', fullUrl);
+      if (data.needsReview) access.append(el('div', 'Metadata needs review.'));
     }
-    $('drawer').classList.add('open'); $('drawer').setAttribute('aria-hidden','false');
+    $('drawer').classList.add('open'); $('drawer').setAttribute('aria-hidden', 'false');
     $('overlay').classList.add('show');
     nodes.selectAll('.node').classed('active', n => n.data.id === selected);
   }
@@ -124,7 +136,7 @@
     closeSearch();
     searchInput.value = searchableTitle(node.data);
     render(false);
-    detail(node.data);
+    activate(node);
     centerNode(node);
   }
   function updateSearch() {
@@ -158,7 +170,7 @@
       const title = el('span', searchableTitle(node.data));
       title.className = 'search-result-title';
       const authors = searchableAuthors(node.data);
-      const subtitle = el('span', authors || (node.data.kind === 'book' ? 'Book' : 'Article'));
+      const subtitle = el('span', authors || (node.data.kind === 'code' ? 'Code' : node.data.kind === 'book' ? 'Book' : 'Article'));
       subtitle.className = 'search-result-meta';
       button.append(title, subtitle);
       button.addEventListener('click', () => chooseSearchResult(node));
@@ -227,6 +239,8 @@
       if (node.children) { node._children=node.children; node.children=null; }
       else if(node._children){node.children=node._children;node._children=null;}
       render(true);
+    } else if (node.data.kind === 'code' && safeUrl(node.data.sourceUrl)) {
+      window.open(safeUrl(node.data.sourceUrl), '_blank', 'noopener,noreferrer');
     } else detail(node.data);
   }
   $('expand').addEventListener('click',()=>{ if(!root)return;expand(root);render(true); });
@@ -242,6 +256,28 @@
   $('overlay').addEventListener('click',hidePanel);
   window.addEventListener('keydown',event=>{if(event.key==='Escape')hidePanel();});
   window.addEventListener('resize',()=>{if(root)fit(100);});
+  // Site-local metadata generated by the public deployment workflow (no API calls).
+  Promise.all([
+    fetch('./release.json', {cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),
+    fetch('./changes.json', {cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)
+  ]).then(([release, changes])=>{
+    const status = $('update-summary');
+    if (!status) return;
+    const date = release?.date ? new Date(release.date) : null;
+    const when = date && !Number.isNaN(date.getTime())
+      ? date.toLocaleDateString('en-GB', {day:'2-digit', month:'short', year:'numeric'}) : '';
+    const msg = String(release?.commit || '').slice(0,150);
+    status.textContent = [when && 'Last update: '+when, msg].filter(Boolean).join(' · ') || 'Latest update';
+    const changesBox = $('update-changes');
+    if (changesBox && changes) {
+      const title = el('div', `${changes.added || 0} added · ${changes.removed || 0} removed · ${changes.updated || 0} updated`);
+      changesBox.append(title);
+      for (const item of (changes.added_titles || []).slice(0,6)) {
+        const t = el('div','+ '+item); t.className='change-item'; changesBox.append(t);
+      }
+      if ((changes.added_titles || []).length>6) changesBox.append(el('div', '…and more'));
+    }
+  });
   fetch('./catalog.json', {cache:'no-store'})
     .then(response=>{if(!response.ok)throw Error('Catalog unavailable');return response.json();})
     .then(data=>{
@@ -254,7 +290,7 @@
         const finalWord = parts.pop();
         brand.replaceChildren(document.createTextNode(parts.length ? parts.join(' ') + ' ' : ''), el('span', finalWord));
       }
-      searchable = root.descendants().filter(node => node.data.kind === 'article' || node.data.kind === 'book');
+      searchable = root.descendants().filter(node => ['article', 'book', 'code'].includes(node.data.kind));
       // Start compact: root + main topics, expand folders manually or all at once.
       (root.children||[]).forEach(collapse);
       render(true);

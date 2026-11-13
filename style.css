@@ -75,3 +75,16 @@ body { background: var(--bg); color: var(--white); }
 .search-result-meta, .search-empty { color: #afcbea; }
 .message { color: #bdd2ed; }
 ::selection { background: #2e6ead; color: #fff; }
+
+/* v3: dedicated repository nodes and compact commit activity footer */
+.node.code circle {fill:#6e80d9;stroke:#c4cfff}
+.node.code text {fill:#b8c8ff}
+.release {position:absolute;z-index:5;right:14px;bottom:12px;max-width:min(480px,calc(100vw - 28px));
+  font-size:11px;color:#a8c6e8;background:rgba(7,20,36,.85);border:1px solid #29496d;
+  border-radius:7px;box-shadow:0 4px 24px rgba(0,0,0,.22);backdrop-filter:blur(7px)}
+.release summary {list-style:none;cursor:pointer;white-space:normal;padding:9px 12px;line-height:1.5}
+.release summary::-webkit-details-marker{display:none}
+.release summary:hover{color:#e3f1ff}
+.release-content {border-top:1px solid #29496d;padding:9px 12px;line-height:1.7;max-height:170px;overflow-y:auto}
+.change-item{overflow-wrap:anywhere;color:#d8eaff}
+@media(max-width:680px){.release{right:6px;bottom:6px;max-width:calc(100vw - 12px);font-size:10px}}
