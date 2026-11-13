@@ -254,6 +254,19 @@
         "kind": "folder",
         "children": [
           {
+            "id": "5878baf159b97013",
+            "name": "&('*),+.-(/10324-527698;:<67=>&?+<@3AB=>C<&D:FE5'*69&(-,GD27)3).HIA",
+            "title": "&('*),+.-(/10324-527698;:<67=>&?+<@3AB=>C<&D:FE5'*69&(-,GD27)3).HIA",
+            "authors": "OQP OSRBTVUXW Y[Z \\^]",
+            "abstract": "",
+            "kind": "article",
+            "access": "download",
+            "sourceUrl": null,
+            "sourceType": null,
+            "downloadUrl": "papers/5878baf159b97013.pdf",
+            "originalFilename": "s17-229.pdf"
+          },
+          {
             "id": "df3e98014113c3cf",
             "name": "Introduction to Supersymmetric Theory of Stochastics",
             "title": "Introduction to Supersymmetric Theory of Stochastics",
@@ -336,5 +349,5 @@
       }
     ]
   },
-  "count": 21
+  "count": 22
 }
