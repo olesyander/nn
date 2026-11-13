@@ -16,7 +16,7 @@
   function short(s, n = labelLimit) { return s.length > n ? s.slice(0, n - 1) + '…' : s; }
   function el(tag, text) { const e = document.createElement(tag); e.textContent = text; return e; }
   function hidePanel() {
-    $('drawer').classList.remove('open'); $('drawer').setAttribute('aria-hidden','true');
+    $('drawer').classList.remove('open'); $('drawer').setAttribute('aria-hidden', 'true');
     $('overlay').classList.remove('show'); selected = null;
     nodes.selectAll('.node').classed('active', false);
   }
@@ -114,7 +114,7 @@
   const searchableAuthors = data => Array.isArray(data.authors) ? data.authors.join(', ') : String(data.authors || '');
   function closeSearch() {
     searchResults.hidden = true;
-    searchInput.setAttribute('aria-expanded','false');
+    searchInput.setAttribute('aria-expanded', 'false');
     searchResults.replaceChildren();
   }
   function centerNode(node) {
@@ -151,18 +151,18 @@
       const query = terms.join(' ');
       const priority = title.startsWith(query) ? 0 : title.includes(query) ? 1 :
         authors.startsWith(query) ? 2 : 3;
-      return {node, priority};
-    }).filter(Boolean).sort((a,b) => a.priority - b.priority ||
+      return { node, priority };
+    }).filter(Boolean).sort((a, b) => a.priority - b.priority ||
       searchableTitle(a.node.data).localeCompare(searchableTitle(b.node.data)));
     searchResults.hidden = false;
-    searchInput.setAttribute('aria-expanded','true');
+    searchInput.setAttribute('aria-expanded', 'true');
     if (!matches.length) {
       const empty = el('div', 'No matching publications');
       empty.className = 'search-empty';
       searchResults.append(empty);
       return;
     }
-    for (const {node} of matches.slice(0, 12)) {
+    for (const { node } of matches.slice(0, 12)) {
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'search-result';
@@ -177,7 +177,7 @@
       searchResults.append(button);
     }
     if (matches.length > 12) {
-      searchResults.append(Object.assign(el('div', `${matches.length - 12} more matches — refine your search`), {className:'search-empty'}));
+      searchResults.append(Object.assign(el('div', `${matches.length - 12} more matches — refine your search`), { className: 'search-empty' }));
     }
   }
   searchInput.addEventListener('input', updateSearch);
@@ -191,9 +191,9 @@
   searchResults.addEventListener('keydown', event => {
     const buttons = [...searchResults.querySelectorAll('button.search-result')];
     const index = buttons.indexOf(document.activeElement);
-    if (event.key === 'Escape') {event.preventDefault(); closeSearch(); searchInput.focus(); event.stopPropagation();}
-    if (event.key === 'ArrowDown') {event.preventDefault(); buttons[Math.min(buttons.length - 1, index + 1)]?.focus();}
-    if (event.key === 'ArrowUp') {event.preventDefault(); if(index === 0)searchInput.focus();else buttons[Math.max(0,index-1)]?.focus();}
+    if (event.key === 'Escape') { event.preventDefault(); closeSearch(); searchInput.focus(); event.stopPropagation(); }
+    if (event.key === 'ArrowDown') { event.preventDefault(); buttons[Math.min(buttons.length - 1, index + 1)]?.focus(); }
+    if (event.key === 'ArrowUp') { event.preventDefault(); if (index === 0) searchInput.focus(); else buttons[Math.max(0, index - 1)]?.focus(); }
   });
   document.addEventListener('click', event => {
     if (!event.target.closest('.search-wrap')) closeSearch();
@@ -203,85 +203,99 @@
   function collapse(node) { (node.children || []).forEach(collapse); if (node.children) { node._children = node.children; node.children = null; } }
   function fit(duration = 400) {
     const e = viewport.node().getBBox();
-    const area=$('canvas').getBoundingClientRect();
+    const area = $('canvas').getBoundingClientRect();
     if (!e.width || !e.height || !area.width || !area.height) return;
     const side = $('drawer').classList.contains('open') && area.width > 850 ? 410 : 0;
     const usable = area.width - side;
-    const scale = Math.min(1.15, Math.max(.13, (usable - 105) / e.width), Math.max(.13,(area.height - 95) / e.height));
-    const x = (usable - e.width * scale)/2 - e.x*scale;
-    const y = (area.height - e.height * scale)/2 - e.y*scale;
-    svg.transition().duration(duration).call(zoom.transform,d3.zoomIdentity.translate(x,y).scale(scale));
+    const scale = Math.min(1.15, Math.max(.13, (usable - 105) / e.width), Math.max(.13, (area.height - 95) / e.height));
+    const x = (usable - e.width * scale) / 2 - e.x * scale;
+    const y = (area.height - e.height * scale) / 2 - e.y * scale;
+    svg.transition().duration(duration).call(zoom.transform, d3.zoomIdentity.translate(x, y).scale(scale));
   }
-  function render(autoFit=false) {
-    const tree=treeLayout(root);
-    const list=tree.descendants();
-    const path=d3.linkHorizontal().x(d=>d.y).y(d=>d.x);
-    links.selectAll('path.link').data(tree.links(),d=>d.target.data.id)
-      .join('path').attr('class','link').attr('d',path);
-    const selection = nodes.selectAll('g.node').data(list,d=>d.data.id)
+  function render(autoFit = false) {
+    const tree = treeLayout(root);
+    const list = tree.descendants().filter(n => n.data.kind !== 'virtual');
+    const path = d3.linkHorizontal().x(d => d.y).y(d => d.x);
+    links.selectAll('path.link').data(tree.links().filter(l => l.source.data.kind !== 'virtual'), d => d.target.data.id)
+      .join('path').attr('class', 'link').attr('d', path);
+    const selection = nodes.selectAll('g.node').data(list, d => d.data.id)
       .join(enter => {
-        const g=enter.append('g').attr('class', d=>'node '+d.data.kind).attr('tabindex',0).attr('role','button');
-        g.append('circle'); g.append('text').attr('x',14).attr('dy','.35em');
+        const g = enter.append('g').attr('class', d => 'node ' + d.data.kind + (d.data.rootType === 'code' ? ' code-root' : '')).attr('tabindex', 0).attr('role', 'button');
+        g.append('circle'); g.append('text').attr('x', 14).attr('dy', '.35em');
         g.append('title'); return g;
       })
-      .attr('transform', d=>`translate(${d.y},${d.x})`)
-      .classed('active', d=>d.data.id===selected)
-      .on('click', (_event,d)=>activate(d))
-      .on('keydown', (event,d)=>{if (event.key==='Enter' || event.key===' ') {event.preventDefault();activate(d);}});
-    selection.select('circle').attr('r',d=>d.depth===0?10:d.data.kind==='folder'?7:5);
-    selection.select('text').text(d=>short(d.data.name,d.data.kind==='folder'?35:labelLimit));
-    selection.select('title').text(d=>d.data.name);
+      .attr('transform', d => `translate(${d.y},${d.x})`)
+      .classed('active', d => d.data.id === selected)
+      .on('click', (_event, d) => activate(d))
+      .on('keydown', (event, d) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); activate(d); } });
+    selection.select('circle').attr('r', d => (d.depth === 0 || d.parent?.data.kind === 'virtual') ? 10 : d.data.kind === 'folder' ? 7 : 5);
+    selection.select('text').text(d => short(d.data.name, d.data.kind === 'folder' ? 35 : labelLimit));
+    selection.select('title').text(d => d.data.name);
     if (autoFit) fit();
   }
   function activate(node) {
     if (node.data.kind === 'folder') {
       hidePanel();
-      if (node.children) { node._children=node.children; node.children=null; }
-      else if(node._children){node.children=node._children;node._children=null;}
+      if (node.children) { node._children = node.children; node.children = null; }
+      else if (node._children) { node.children = node._children; node._children = null; }
       render(true);
     } else if (node.data.kind === 'code' && safeUrl(node.data.sourceUrl)) {
       window.open(safeUrl(node.data.sourceUrl), '_blank', 'noopener,noreferrer');
     } else detail(node.data);
   }
-  $('expand').addEventListener('click',()=>{ if(!root)return;expand(root);render(true); });
-  $('collapse').addEventListener('click',()=>{
-    if(!root)return;
+  $('expand').addEventListener('click', () => { if (!root) return; expand(root); render(true); });
+  $('collapse').addEventListener('click', () => {
+    if (!root) return;
     hidePanel();
-    // Keep the topic names visible, collapse their descendants.
+    // Keep each independent tree's first-level topics visible.
     expand(root);
-    (root.children||[]).forEach(collapse);
+    const treeRoots = root.data.kind === 'virtual' ? root.children : [root];
+    treeRoots.forEach(top => (top.children || []).forEach(collapse));
     render(true);
   });
-  $('close').addEventListener('click',hidePanel);
-  $('overlay').addEventListener('click',hidePanel);
-  window.addEventListener('keydown',event=>{if(event.key==='Escape')hidePanel();});
-  window.addEventListener('resize',()=>{if(root)fit(100);});
+  $('close').addEventListener('click', hidePanel);
+  $('overlay').addEventListener('click', hidePanel);
+  window.addEventListener('keydown', event => { if (event.key === 'Escape') hidePanel(); });
+  window.addEventListener('resize', () => { if (root) fit(100); });
   // Site-local metadata generated by the public deployment workflow (no API calls).
   Promise.all([
-    fetch('./release.json', {cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),
-    fetch('./changes.json', {cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)
-  ]).then(([release, changes])=>{
+    fetch('./release.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : null).catch(() => null),
+    fetch('./changes.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : null).catch(() => null)
+  ]).then(([release, changes]) => {
     const status = $('update-summary');
     if (!status) return;
     const date = release?.date ? new Date(release.date) : null;
     const when = date && !Number.isNaN(date.getTime())
-      ? date.toLocaleDateString('en-GB', {day:'2-digit', month:'short', year:'numeric'}) : '';
-    const msg = String(release?.commit || '').slice(0,150);
-    status.textContent = [when && 'Last update: '+when, msg].filter(Boolean).join(' · ') || 'Latest update';
+      ? date.toLocaleString('en-GB', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false,
+        timeZone: 'Europe/Vilnius'
+      }) : '';
+    const msg = String(release?.commit || '').slice(0, 150);
+    status.textContent = [when && 'Last update: ' + when, msg].filter(Boolean).join(' · ') || 'Latest update';
     const changesBox = $('update-changes');
     if (changesBox && changes) {
       const title = el('div', `${changes.added || 0} added · ${changes.removed || 0} removed · ${changes.updated || 0} updated`);
       changesBox.append(title);
-      for (const item of (changes.added_titles || []).slice(0,6)) {
-        const t = el('div','+ '+item); t.className='change-item'; changesBox.append(t);
+      for (const item of (changes.added_titles || []).slice(0, 6)) {
+        const t = el('div', '+ ' + item); t.className = 'change-item'; changesBox.append(t);
       }
-      if ((changes.added_titles || []).length>6) changesBox.append(el('div', '…and more'));
+      if ((changes.added_titles || []).length > 6) changesBox.append(el('div', '…and more'));
     }
   });
-  fetch('./catalog.json', {cache:'no-store'})
-    .then(response=>{if(!response.ok)throw Error('Catalog unavailable');return response.json();})
-    .then(data=>{
-      root=d3.hierarchy(data.tree);
+  fetch('./catalog.json', { cache: 'no-store' })
+    .then(response => { if (!response.ok) throw Error('Catalog unavailable'); return response.json(); })
+    .then(data => {
+      // Two independent trees: invisible layout root, no connecting lines.
+      // Legacy catalogs without codeTree still render as before.
+      const trees = data.codeTree ? [data.tree, data.codeTree] : [data.tree];
+      root = d3.hierarchy(trees.length > 1
+        ? { id: 'virtual-root', kind: 'virtual', name: '', children: trees }
+        : data.tree);
       const mapTitle = String(data.title || data.tree?.name || 'disorder map').trim();
       document.title = mapTitle;
       const brand = $('brand');
@@ -292,8 +306,9 @@
       }
       searchable = root.descendants().filter(node => ['article', 'book', 'code'].includes(node.data.kind));
       // Start compact: root + main topics, expand folders manually or all at once.
-      (root.children||[]).forEach(collapse);
+      const treeRoots = root.data.kind === 'virtual' ? root.children : [root];
+      treeRoots.forEach(top => (top.children || []).forEach(collapse));
       render(true);
     })
-    .catch(()=>{ $('message').hidden=false;$('message').textContent='Unable to load the library catalog.'; });
+    .catch(() => { $('message').hidden = false; $('message').textContent = 'Unable to load the library catalog.'; });
 })();
