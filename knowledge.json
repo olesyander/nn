@@ -248,6 +248,30 @@
     {
       "source": "1632845bce525c687f9e",
       "target": "e3d8c3501899e3ddd3ca",
+      "type": "citation",
+      "strength": 1.0,
+      "directed": true,
+      "explanation": "The source publication cites the target (OpenAlex)."
+    },
+    {
+      "source": "bc96386905ac7b124db2",
+      "target": "479afc99041bd98f2c3c",
+      "type": "citation",
+      "strength": 1.0,
+      "directed": true,
+      "explanation": "The source publication cites the target (OpenAlex)."
+    },
+    {
+      "source": "c5e8ee038b363e3a747e",
+      "target": "e3d8c3501899e3ddd3ca",
+      "type": "citation",
+      "strength": 1.0,
+      "directed": true,
+      "explanation": "The source publication cites the target (OpenAlex)."
+    },
+    {
+      "source": "1632845bce525c687f9e",
+      "target": "e3d8c3501899e3ddd3ca",
       "type": "similar",
       "strength": 0.54,
       "terms": [
@@ -487,10 +511,10 @@
   ],
   "meta": {
     "documents": 22,
-    "links": 20,
-    "citations": 0,
+    "links": 23,
+    "citations": 3,
     "authors": 0,
     "similar": 20,
-    "openalex_requests": 0
+    "openalex_requests": 16
   }
 }
