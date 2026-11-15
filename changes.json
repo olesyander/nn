@@ -1,1 +1,31 @@
-{"added": 0, "removed": 0, "updated": 0, "added_titles": [], "removed_titles": []}
+{
+  "added": 23,
+  "removed": 0,
+  "updated": 0,
+  "added_titles": [
+    "A Perturbative Analysis of Stochastic Descent",
+    "Broken Ergodicity and the Violation of the Fluctuation-Dissipation Theorem Lead to Generalization Beyond Overfitting in Machine Learning",
+    "Fluctuation-dissipation relations for stochastic gradient descent",
+    "Harmonic analysis in phase space and finite Weyl-Heisenberg ensembles",
+    "Introduction to Supersymmetric Theory of Stochastics",
+    "Normalizing Flows and the Real-Time Sign Problem",
+    "On the Trajectories of SGD Without Replacement",
+    "Operator ordering schemes and covariant path integrals of quantum and stochastic processes in Curved space",
+    "Path integrals and stochastic calculus",
+    "Quantum Stochastic Gradient Descent in its continuous-time limit based on the Wigner formulation of Open Quantum Systems",
+    "Relaxation speed in quenched-random force fields",
+    "SacayGif-sur-Yvette,France",
+    "Stochastic Gradient Langevin Dynamics Based on Quantization with Increasing Resolution",
+    "Stochastic learning flow: moment equations for stochastic gradient descent at finite step size",
+    "Stochastic Modified Equations and Dynamics of Stochastic Gradient Algorithms I: Mathematical Foundations",
+    "test",
+    "The global convergence time of stochastic gradient descent in non-convex landscapes: Sharp estimates via large deviations",
+    "Weyl Calculus and Exactly Solvable Schrödinger Bridges with Quadratic State Cost",
+    "Why SGD is not Brownian Motion: A New Perspective on Stochastic Dynamics",
+    "Машинное обучение — конспект пяти занятий",
+    "Методы некоммутативного анализа Пер с англ авт Назайкинский В Е",
+    "Мультипликативная эргодическая теорема",
+    "Стохастические дифференциальные уравнения: теория и практика численного решения"
+  ],
+  "removed_titles": []
+}
