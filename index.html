@@ -1,37 +1,57 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0c0e12">
+  <meta name="theme-color" content="">
   <meta name="description" content="An interactive map of scientific literature.">
-  <title>disorder map</title>
-  <link rel="stylesheet" href="./style.css?v=v3-20261113">
+  <title>NeuralNetwork map</title>
+  <link rel="stylesheet" href="./style.css?v=v3.6.3">
 </head>
+
 <body>
   <div class="shell">
     <header class="topbar">
       <div class="brand" id="brand">Research <span>map</span></div>
+      <nav class="view-tabs" role="tablist" aria-label="Map view">
+        <button class="view-tab active" id="tab-knowledge" type="button" role="tab" aria-selected="true"
+          aria-controls="knowledge-view">Knowledge Graph</button>
+        <button class="view-tab" id="tab-library" type="button" role="tab" aria-selected="false"
+          aria-controls="canvas">Library</button>
+      </nav>
       <div class="actions">
         <div class="search-wrap">
           <label class="sr-only" for="search-input">Search publications by title or author</label>
-          <input type="search" id="search-input" class="search-input"
-            placeholder="Search title or author…" aria-label="Search title or author"
-            aria-controls="search-results" aria-expanded="false" autocomplete="off" spellcheck="false">
-          <div id="search-results" class="search-results" role="listbox" aria-label="Matching publications" hidden></div>
+          <input type="search" id="search-input" class="search-input" placeholder="Search title or author…"
+            aria-label="Search title or author" aria-controls="search-results" aria-expanded="false" autocomplete="off"
+            spellcheck="false">
+          <div id="search-results" class="search-results" role="listbox" aria-label="Matching publications" hidden>
+          </div>
         </div>
-        <button type="button" class="action" id="expand" aria-label="Expand all folders">Expand all</button>
-        <button type="button" class="action" id="collapse" aria-label="Collapse all folders">Collapse all</button>
       </div>
     </header>
-    <main class="canvas" id="canvas" aria-label="Interactive library tree">
-      <svg id="map" role="img" aria-label="Topic folders and publications. Click folders to expand and articles to read their details."></svg>
+    <main class="canvas" id="canvas" aria-label="Interactive library tree" hidden>
+      <svg id="map" role="img"
+        aria-label="Topic folders and publications. Click folders to expand and articles to read their details."></svg>
       <div id="message" class="message" hidden></div>
     </main>
-    <details class="release" id="release" aria-label="Latest update">
-      <summary id="update-summary">Latest update</summary>
-      <div id="update-changes" class="release-content"></div>
-    </details>
+    <section id="knowledge-view" class="knowledge-view" aria-label="Publication relationships">
+      <div class="knowledge-controls">
+        <div class="knowledge-filters">
+          <label class="kg-option kg-citation"><input type="checkbox" id="kg-citation" checked> Citations</label>
+          <label class="kg-option kg-author"><input type="checkbox" id="kg-author" checked> Shared authors</label>
+          <label class="kg-option kg-similar"><input type="checkbox" id="kg-similar" checked> Similar text</label>
+          <label class="kg-option kg-isolated"><input type="checkbox" id="kg-isolated" checked> Isolated papers</label>
+        </div>
+        <p id="knowledge-status" class="knowledge-status" role="status">Knowledge graph</p>
+      </div>
+      <svg id="knowledge-svg" aria-label="Knowledge graph of publications" role="img"></svg>
+    </section>
+    <!-- Public deployment time only; commit messages are not exposed. -->
+    <div class="release" id="release" aria-label="Latest update time">
+      <time id="update-summary">Update time unavailable</time>
+    </div>
     <div id="overlay" class="overlay" aria-hidden="true"></div>
     <aside class="drawer" id="drawer" aria-label="Publication details" aria-hidden="true">
       <div class="drawer-header">
@@ -50,6 +70,9 @@
     </aside>
   </div>
   <script defer src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-  <script defer src="./app.js?v=v3-20261113"></script>
+  <script defer src="./site-config.js?v=v3.6.3"></script>
+  <script defer src="./app.js?v=v3.6.3"></script>
+  <script defer src="./knowledge.js?v=v3.6.3"></script>
 </body>
+
 </html>
