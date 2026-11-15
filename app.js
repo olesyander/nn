@@ -268,7 +268,7 @@
         ? date.toLocaleString(CFG.date?.locale || 'en-GB', {
           day: '2-digit', month: 'short', year: 'numeric',
           hour: '2-digit', minute: '2-digit', hour12: false,
-          timeZone: CFG.date?.timeZone || 'Europe/Moscowsss'
+          timeZone: CFG.date?.timeZone || 'Europe/Moscow'
         })
         : (T.timeUnavailable || 'Update time unavailable');
       if (valid) status.setAttribute('datetime', date.toISOString());

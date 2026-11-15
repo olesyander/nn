@@ -46,7 +46,7 @@ window.RESEARCH_MAP_CONFIG = {
   knowledge: {
     // One edge per pair: stronger relationship takes precedence.
     // Keep all 3 types here; reorder their numeric priority if desired.
-    relationPriority: {citation: 0, author: 1, similar: 2},
+    relationPriority: { citation: 0, author: 1, similar: 2 },
     // Front-end display floor. Python builds links >= 0.15 by default;
     // raising this filters visible links without re-running GitHub Actions.
     minimumTextStrength: 0.15,
@@ -56,14 +56,14 @@ window.RESEARCH_MAP_CONFIG = {
     showSimilarityInitially: true
   },
   // Local timestamp display; release.json contains ONLY the timestamp.
-  date: {locale: 'en-GB', timeZone: 'Europe/Vilnius'}
+  date: { locale: 'en-GB', timeZone: 'Europe/Moscow' }
 };
 
 // Set static labels before app.js / knowledge.js load.
 (() => {
   const c = window.RESEARCH_MAP_CONFIG;
   const L = c.labels;
-  const set = (id, text) => {const el = document.getElementById(id); if (el) el.textContent = text;};
+  const set = (id, text) => { const el = document.getElementById(id); if (el) el.textContent = text; };
   set('tab-library', L.libraryTab);
   set('tab-knowledge', L.knowledgeTab);
   const search = document.getElementById('search-input');
