@@ -7,7 +7,7 @@
   <meta name="theme-color" content="">
   <meta name="description" content="An interactive map of scientific literature.">
   <title>NeuralNetwork map</title>
-  <link rel="stylesheet" href="./style.css?v=v3.6.3">
+  <link rel="stylesheet" href="./style.css?v=footer-fix-2">
 </head>
 
 <body>
@@ -49,8 +49,9 @@
       <svg id="knowledge-svg" aria-label="Knowledge graph of publications" role="img"></svg>
     </section>
     <!-- Public deployment time only; commit messages are not exposed. -->
-    <div class="release" id="release" aria-label="Latest update time">
-      <time id="update-summary">Update time unavailable</time>
+    <div class="release" id="release">
+      <span class="release-label">Last commit:</span>
+      <time id="update-summary">Unavailable</time>
     </div>
     <div id="overlay" class="overlay" aria-hidden="true"></div>
     <aside class="drawer" id="drawer" aria-label="Publication details" aria-hidden="true">

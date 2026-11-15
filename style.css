@@ -934,3 +934,45 @@ button {
     font-size: 10px;
   }
 }
+
+/* LAST COMMIT — plain text, one line */
+
+#release {
+  position: absolute;
+  right: 20px;
+  bottom: 16px;
+  z-index: 5;
+
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 5px;
+
+  width: max-content;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 1.4;
+  white-space: nowrap;
+
+  pointer-events: none;
+  cursor: default;
+}
+
+#release .release-label,
+#release #update-summary {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
