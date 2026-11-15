@@ -1,4 +1,4 @@
-name: Deploy research map
+name: Deploy NeuralNetwork map
 on:
   push:
     branches: [main]
@@ -20,29 +20,63 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout public site
+      - name: Checkout public repository
         uses: actions/checkout@v4
-      - name: Build static release metadata
+
+      - name: Validate graph and prepare site
         shell: bash
         run: |
           set -euo pipefail
+          # Keep this manifest together: missing JavaScript/JSON files made
+          # the graph silently disappear in the previous workflow.
+          required=(index.html style.css site-config.js app.js knowledge.js catalog.json knowledge.json)
+          for name in "${required[@]}"; do
+            if [[ ! -f "$name" ]]; then
+              echo "::error::Missing $name in public repository; aborting Pages deployment."
+              exit 1
+            fi
+          done
+          python - <<'PYTHON'
+          import json
+          from pathlib import Path
+          catalog = json.loads(Path('catalog.json').read_text(encoding='utf-8'))
+          graph = json.loads(Path('knowledge.json').read_text(encoding='utf-8'))
+          nodes, edges = graph.get('nodes'), graph.get('edges')
+          if not isinstance(nodes, list) or not isinstance(edges, list):
+              raise SystemExit('knowledge.json must contain nodes and edges arrays')
+          ids = {str(p['id']) for p in nodes}
+          invalid = [e for e in edges if str(e.get('source')) not in ids or str(e.get('target')) not in ids]
+          if invalid:
+              raise SystemExit(f'knowledge.json has {len(invalid)} dangling relationships')
+          def leaves(folder):
+              return sum(leaves(ch) if ch.get('kind') == 'folder' else (ch.get('kind') in ('article','book'))
+                         for ch in folder.get('children', []))
+          count = leaves(catalog['tree'])
+          if count and not nodes:
+              raise SystemExit('knowledge.json is a placeholder (0 nodes) while catalog has publications: rerun private publish workflow')
+          if count != len(nodes):
+              raise SystemExit(f'Graph/catalog mismatch: {len(nodes)} knowledge nodes vs {count} papers')
+          print(f'Validated: {len(nodes)} publications and {len(edges)} relationships')
+          PYTHON
           mkdir -p _site
-          cp index.html app.js style.css catalog.json _site/
+          cp "${required[@]}" _site/
           touch _site/.nojekyll
           if [[ -d papers ]]; then cp -a papers _site/papers; fi
           if [[ -f changes.json ]]; then cp changes.json _site/changes.json; fi
-          python - <<'PY'
+          # Only the date is published; technical commit messages are not shown.
+          python - <<'PYTHON'
           import json, pathlib, subprocess
           date = subprocess.check_output(['git', 'log', '-1', '--format=%cI'], text=True).strip()
-          subject = subprocess.check_output(['git', 'log', '-1', '--format=%s'], text=True).strip()
-          pathlib.Path('_site/release.json').write_text(json.dumps({'date': date, 'commit': subject}, ensure_ascii=False))
-          PY
-      - name: Configure Pages
+          pathlib.Path('_site/release.json').write_text(
+              json.dumps({'date': date}, ensure_ascii=False), encoding='utf-8')
+          PYTHON
+
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
-      - name: Upload site
+      - name: Upload prepared site
         uses: actions/upload-pages-artifact@v4
         with:
           path: _site
-      - name: Deploy to Pages
+      - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         id: deployment
