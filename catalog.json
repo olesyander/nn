@@ -393,6 +393,23 @@
             "needsReview": false
           },
           {
+            "id": "cf8104336cd92697852e",
+            "name": "The Theory of Stochastic Pseudo-differential Operators and Its Applications, I",
+            "title": "The Theory of Stochastic Pseudo-differential Operators and Its Applications, I",
+            "authors": "Xu Liu, Xu Zhang",
+            "abstract": "The purpose of this paper is to establish the theory of stochastic pseudo-differential operators and give its applications in stochastic partial differential equations. First, we introduce some concepts on stochastic pseudo-differential operators and prove their fundamental properties. Also, we present the boundedness theory, invertibility of stochastic elliptic operators and the Garding inequality. Moreover, as an application of the theory of stochastic pseudo-differential operators, we give a Calderon-type uniqueness theorem on the Cauchy problem of stochastic partial differential equations. The proof of the uniqueness theorem is based on a new Carleman-type estimate, which is adapted to the stochastic setting.",
+            "kind": "article",
+            "access": "external",
+            "doi": null,
+            "arxivId": "1103.0138",
+            "sourceUrl": "https://arxiv.org/abs/1103.0138",
+            "sourceType": "arXiv",
+            "openUrl": "https://arxiv.org/pdf/1103.0138",
+            "downloadUrl": null,
+            "originalFilename": "leon-cohen-the-weyl-operator-and-its-generalization.pdf",
+            "needsReview": false
+          },
+          {
             "id": "b4db959f7c49c30fabf2",
             "name": "Weyl Calculus and Exactly Solvable Schrödinger Bridges with Quadratic State Cost",
             "title": "Weyl Calculus and Exactly Solvable Schrödinger Bridges with Quadratic State Cost",
@@ -437,7 +454,7 @@
       }
     ]
   },
-  "count": 23,
+  "count": 24,
   "codeTree": {
     "id": "folder:21fad8f27d0d5dffb5af",
     "name": "code",
