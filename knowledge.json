@@ -36,14 +36,14 @@
     },
     {
       "id": "f25713f39b09a198765f",
-      "title": "Harmonic analysis in phase space and finite Weyl-Heisenberg ensembles",
-      "authors": "Luís Daniel Abreu, Karlheinz Gröchenig, José Luis Romero",
+      "title": "Harmonic Analysis in Phase Space",
+      "authors": "Gerald B. Folland",
       "kind": "article",
-      "access": "external",
-      "sourceUrl": "https://arxiv.org/abs/1704.03042",
-      "openUrl": "https://arxiv.org/pdf/1704.03042",
-      "downloadUrl": null,
-      "abstract": "Weyl-Heisenberg ensembles are translation-invariant determinantal point processes on $\\mathbb{R}^{2d}$ associated with the Schrödinger representation of the Heisenberg group, and include as examples the Ginibre ensemble and the polyanalytic ensembles, which model the higher Landau levels in physics. We introduce finite versions of the Weyl-Heisenberg ensembles and show that they behave analogously to the finite Ginibre ensembles. More specifically, guided by the observation that the Ginibre ensemble with $N$ points is asymptotically close to the restriction of the infinite Ginibre ensemble to the disk of area $N$, we define finite WH ensembles as adequate finite approximations of the restriction of infinite WH ensembles to a given domain $Ω$. We provide a precise rate for the convergence of the corresponding one-point intensities to the indicator function of $Ω$, as $Ω$ is dilated and the process is rescaled proportionally (thermodynamic regime). The construction and analysis rely neither on explicit formulas nor on the asymptotics for orthogonal polynomials, but rather on phase-space methods. Second, we apply our construction to study the pure finite Ginibre-type polyanalytic ensembles, which model finite particle systems in a single Landau level, and are defined in terms of complex Hermite polynomials. On a technical level, we show that finite WH ensembles provide an approximate model for finite polyanalytic Ginibre ensembles, and we quantify the corresponding deviation. By means of this asymptotic description, we derive e"
+      "access": "open",
+      "sourceUrl": null,
+      "openUrl": "papers/f25713f39b09a198765f.pdf",
+      "downloadUrl": "papers/f25713f39b09a198765f.pdf",
+      "abstract": ""
     },
     {
       "id": "df3e98014113c3cf81e3",
@@ -179,14 +179,14 @@
     },
     {
       "id": "cf8104336cd92697852e",
-      "title": "The Theory of Stochastic Pseudo-differential Operators and Its Applications, I",
-      "authors": "Xu Liu, Xu Zhang",
+      "title": "The Weyl Operator and its Generalization",
+      "authors": "Leon Cohen",
       "kind": "article",
-      "access": "external",
-      "sourceUrl": "https://arxiv.org/abs/1103.0138",
-      "openUrl": "https://arxiv.org/pdf/1103.0138",
-      "downloadUrl": null,
-      "abstract": "The purpose of this paper is to establish the theory of stochastic pseudo-differential operators and give its applications in stochastic partial differential equations. First, we introduce some concepts on stochastic pseudo-differential operators and prove their fundamental properties. Also, we present the boundedness theory, invertibility of stochastic elliptic operators and the Garding inequality. Moreover, as an application of the theory of stochastic pseudo-differential operators, we give a Calderon-type uniqueness theorem on the Cauchy problem of stochastic partial differential equations. The proof of the uniqueness theorem is based on a new Carleman-type estimate, which is adapted to the stochastic setting."
+      "access": "open",
+      "sourceUrl": "https://doi.org/10.1007/978-3-0348-0294-9",
+      "openUrl": "papers/cf8104336cd92697852e.pdf",
+      "downloadUrl": "papers/cf8104336cd92697852e.pdf",
+      "abstract": ""
     },
     {
       "id": "b4db959f7c49c30fabf2",
@@ -265,6 +265,14 @@
       "explanation": "The source publication cites the target (OpenAlex)."
     },
     {
+      "source": "b4db959f7c49c30fabf2",
+      "target": "cf8104336cd92697852e",
+      "type": "citation",
+      "strength": 1.0,
+      "directed": true,
+      "explanation": "The source publication cites the target (OpenAlex)."
+    },
+    {
       "source": "bc96386905ac7b124db2",
       "target": "479afc99041bd98f2c3c",
       "type": "citation",
@@ -313,9 +321,9 @@
         "gradient descent",
         "stochastic gradient descent",
         "continuous time",
-        "stochastic differential"
+        "differential equation"
       ],
-      "explanation": "Common keywords: gradient descent, stochastic gradient descent, continuous time, stochastic differential"
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, continuous time, differential equation"
     },
     {
       "source": "328a7ad2f2fb52493a69",
@@ -522,10 +530,10 @@
   ],
   "meta": {
     "documents": 23,
-    "links": 23,
-    "citations": 3,
+    "links": 24,
+    "citations": 4,
     "authors": 0,
     "similar": 20,
-    "openalex_requests": 0
+    "openalex_requests": 1
   }
 }
