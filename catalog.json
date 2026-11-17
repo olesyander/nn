@@ -335,6 +335,23 @@
             "needsReview": false
           },
           {
+            "id": "108eaa4a5c6dd590b121",
+            "name": "Lévy Processes in Lie Groups",
+            "title": "Lévy Processes in Lie Groups",
+            "authors": "Ming Liao",
+            "abstract": "",
+            "kind": "article",
+            "access": "open",
+            "doi": "10.1017/cbo9780511546624.003",
+            "arxivId": null,
+            "sourceUrl": "https://doi.org/10.1017/cbo9780511546624.003",
+            "sourceType": "DOI",
+            "openUrl": "papers/108eaa4a5c6dd590b121.pdf",
+            "downloadUrl": "papers/108eaa4a5c6dd590b121.pdf",
+            "originalFilename": "Levy Processes in Lie Groups.pdf",
+            "needsReview": true
+          },
+          {
             "id": "bc96386905ac7b124db2",
             "name": "Path integrals and stochastic calculus",
             "title": "Path integrals and stochastic calculus",
@@ -454,7 +471,7 @@
       }
     ]
   },
-  "count": 24,
+  "count": 25,
   "codeTree": {
     "id": "folder:21fad8f27d0d5dffb5af",
     "name": "code",

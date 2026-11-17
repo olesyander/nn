@@ -1,7 +1,9 @@
 {
-  "added": 0,
+  "added": 1,
   "removed": 0,
-  "updated": 2,
-  "added_titles": [],
+  "updated": 0,
+  "added_titles": [
+    "Lévy Processes in Lie Groups"
+  ],
   "removed_titles": []
 }

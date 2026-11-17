@@ -57,6 +57,17 @@
       "abstract": "Many natural and engineered dynamical systems, including all living objects, exhibit signatures of what can be called spontaneous dynamical long-range order (DLRO). This order's omnipresence has long been recognized by the scientific community, as evidenced by a myriad of related concepts, theoretical and phenomenological frameworks, and experimental phenomena such as turbulence, $1/f$ noise, dynamical complexity, chaos and the butterfly effect, the Richter scale for earthquakes and the scale-free statistics of other sudden processes, self-organization and pattern formation, self-organized criticality, etc. Although several successful approaches to various realizations of DLRO have been established, the universal theoretical understanding of this phenomenon remained elusive. The possibility of constructing a unified theory of DLRO has emerged recently within the approximation-free supersymmetric theory of stochastics (STS). There, DLRO is the spontaneous breakdown of the topological or de Rham supersymmetry that all stochastic differential equations (SDEs) possess. This theory may be interesting to researchers with very different backgrounds because the ubiquitous DLRO is a truly interdisciplinary entity. The STS is also an interdisciplinary construction. This theory is based on dynamical systems theory, cohomological field theories, the theory of pseudo-Hermitian operators, and the conventional theory of SDEs. Reviewing the literature on all these mathematical disciplines can be time-consuming. As such, a concise and self-c"
     },
     {
+      "id": "108eaa4a5c6dd590b121",
+      "title": "Lévy Processes in Lie Groups",
+      "authors": "Ming Liao",
+      "kind": "article",
+      "access": "open",
+      "sourceUrl": "https://doi.org/10.1017/cbo9780511546624.003",
+      "openUrl": "papers/108eaa4a5c6dd590b121.pdf",
+      "downloadUrl": "papers/108eaa4a5c6dd590b121.pdf",
+      "abstract": ""
+    },
+    {
       "id": "56fa3d23d3cc781ae758",
       "title": "Normalizing Flows and the Real-Time Sign Problem",
       "authors": "Scott Lawrence, Yukari Yamauchi",
@@ -302,28 +313,42 @@
     },
     {
       "source": "328a7ad2f2fb52493a69",
+      "target": "5952814f64de9df9229d",
+      "type": "similar",
+      "strength": 0.54,
+      "terms": [
+        "stochastic gradient",
+        "stochastic learn",
+        "differential equation",
+        "stochastic differential"
+      ],
+      "explanation": "Common keywords: stochastic gradient, stochastic learn, differential equation, stochastic differential"
+    },
+    {
+      "source": "328a7ad2f2fb52493a69",
       "target": "88775d9344cdbe51bb5e",
       "type": "similar",
       "strength": 0.68,
       "terms": [
         "gradient descent",
         "stochastic gradient descent",
+        "stochastic gradient",
         "continuous time"
       ],
-      "explanation": "Common keywords: gradient descent, stochastic gradient descent, continuous time"
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, stochastic gradient, continuous time"
     },
     {
       "source": "328a7ad2f2fb52493a69",
       "target": "8b9302d041fe4790ec4d",
       "type": "similar",
-      "strength": 0.38,
+      "strength": 0.54,
       "terms": [
         "gradient descent",
         "stochastic gradient descent",
-        "continuous time",
-        "differential equation"
+        "stochastic gradient",
+        "continuous time"
       ],
-      "explanation": "Common keywords: gradient descent, stochastic gradient descent, continuous time, differential equation"
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, stochastic gradient, continuous time"
     },
     {
       "source": "328a7ad2f2fb52493a69",
@@ -333,10 +358,10 @@
       "terms": [
         "gradient descent",
         "stochastic gradient descent",
-        "descent sgd",
-        "gradient descent sgd"
+        "stochastic gradient",
+        "descent sgd"
       ],
-      "explanation": "Common keywords: gradient descent, stochastic gradient descent, descent sgd, gradient descent sgd"
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, stochastic gradient, descent sgd"
     },
     {
       "source": "328a7ad2f2fb52493a69",
@@ -346,10 +371,10 @@
       "terms": [
         "gradient descent",
         "stochastic gradient descent",
-        "learn rate",
-        "descent sgd"
+        "stochastic gradient",
+        "learn rate"
       ],
-      "explanation": "Common keywords: gradient descent, stochastic gradient descent, learn rate, descent sgd"
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, stochastic gradient, learn rate"
     },
     {
       "source": "328a7ad2f2fb52493a69",
@@ -358,9 +383,10 @@
       "strength": 0.68,
       "terms": [
         "gradient descent",
-        "stochastic gradient descent"
+        "stochastic gradient descent",
+        "stochastic gradient"
       ],
-      "explanation": "Common keywords: gradient descent, stochastic gradient descent"
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, stochastic gradient"
     },
     {
       "source": "328a7ad2f2fb52493a69",
@@ -370,10 +396,10 @@
       "terms": [
         "gradient descent",
         "stochastic gradient descent",
-        "discrete update",
-        "parameter distribution"
+        "stochastic gradient",
+        "discrete update"
       ],
-      "explanation": "Common keywords: gradient descent, stochastic gradient descent, discrete update, parameter distribution"
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, stochastic gradient, discrete update"
     },
     {
       "source": "479afc99041bd98f2c3c",
@@ -386,16 +412,86 @@
       "explanation": "Common keywords: path integral"
     },
     {
+      "source": "5952814f64de9df9229d",
+      "target": "88775d9344cdbe51bb5e",
+      "type": "similar",
+      "strength": 0.44,
+      "terms": [
+        "stochastic gradient"
+      ],
+      "explanation": "Common keywords: stochastic gradient"
+    },
+    {
+      "source": "5952814f64de9df9229d",
+      "target": "8b9302d041fe4790ec4d",
+      "type": "similar",
+      "strength": 0.54,
+      "terms": [
+        "stochastic gradient",
+        "differential equation",
+        "stochastic differential",
+        "stochastic differential equation"
+      ],
+      "explanation": "Common keywords: stochastic gradient, differential equation, stochastic differential, stochastic differential equation"
+    },
+    {
+      "source": "5952814f64de9df9229d",
+      "target": "b082f4948d1209a63926",
+      "type": "similar",
+      "strength": 0.54,
+      "terms": [
+        "stochastic gradient",
+        "non convex",
+        "neural network",
+        "deep neural"
+      ],
+      "explanation": "Common keywords: stochastic gradient, non convex, neural network, deep neural"
+    },
+    {
+      "source": "5952814f64de9df9229d",
+      "target": "c5e8ee038b363e3a747e",
+      "type": "similar",
+      "strength": 0.38,
+      "terms": [
+        "stochastic gradient",
+        "neural network",
+        "objective function"
+      ],
+      "explanation": "Common keywords: stochastic gradient, neural network, objective function"
+    },
+    {
+      "source": "5952814f64de9df9229d",
+      "target": "e3d8c3501899e3ddd3ca",
+      "type": "similar",
+      "strength": 0.44,
+      "terms": [
+        "stochastic gradient"
+      ],
+      "explanation": "Common keywords: stochastic gradient"
+    },
+    {
+      "source": "5952814f64de9df9229d",
+      "target": "ecb52ce42202e1cca401",
+      "type": "similar",
+      "strength": 0.38,
+      "terms": [
+        "stochastic gradient",
+        "neural network"
+      ],
+      "explanation": "Common keywords: stochastic gradient, neural network"
+    },
+    {
       "source": "88775d9344cdbe51bb5e",
       "target": "8b9302d041fe4790ec4d",
       "type": "similar",
-      "strength": 0.38,
+      "strength": 0.54,
       "terms": [
         "gradient descent",
         "stochastic gradient descent",
+        "stochastic gradient",
         "continuous time"
       ],
-      "explanation": "Common keywords: gradient descent, stochastic gradient descent, continuous time"
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, stochastic gradient, continuous time"
     },
     {
       "source": "88775d9344cdbe51bb5e",
@@ -404,9 +500,10 @@
       "strength": 0.68,
       "terms": [
         "gradient descent",
-        "stochastic gradient descent"
+        "stochastic gradient descent",
+        "stochastic gradient"
       ],
-      "explanation": "Common keywords: gradient descent, stochastic gradient descent"
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, stochastic gradient"
     },
     {
       "source": "88775d9344cdbe51bb5e",
@@ -415,9 +512,10 @@
       "strength": 0.38,
       "terms": [
         "gradient descent",
-        "stochastic gradient descent"
+        "stochastic gradient descent",
+        "stochastic gradient"
       ],
-      "explanation": "Common keywords: gradient descent, stochastic gradient descent"
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, stochastic gradient"
     },
     {
       "source": "88775d9344cdbe51bb5e",
@@ -426,9 +524,10 @@
       "strength": 0.68,
       "terms": [
         "gradient descent",
-        "stochastic gradient descent"
+        "stochastic gradient descent",
+        "stochastic gradient"
       ],
-      "explanation": "Common keywords: gradient descent, stochastic gradient descent"
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, stochastic gradient"
     },
     {
       "source": "88775d9344cdbe51bb5e",
@@ -438,72 +537,100 @@
       "terms": [
         "gradient descent",
         "stochastic gradient descent",
-        "continuous time limit",
-        "time limit"
+        "stochastic gradient",
+        "continuous time limit"
       ],
-      "explanation": "Common keywords: gradient descent, stochastic gradient descent, continuous time limit, time limit"
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, stochastic gradient, continuous time limit"
     },
     {
       "source": "8b9302d041fe4790ec4d",
       "target": "b082f4948d1209a63926",
       "type": "similar",
-      "strength": 0.38,
+      "strength": 0.54,
       "terms": [
         "gradient descent",
         "stochastic gradient descent",
-        "descent sgd",
-        "gradient descent sgd"
-      ],
-      "explanation": "Common keywords: gradient descent, stochastic gradient descent, descent sgd, gradient descent sgd"
-    },
-    {
-      "source": "8b9302d041fe4790ec4d",
-      "target": "e3d8c3501899e3ddd3ca",
-      "type": "similar",
-      "strength": 0.38,
-      "terms": [
-        "gradient descent",
-        "stochastic gradient descent"
-      ],
-      "explanation": "Common keywords: gradient descent, stochastic gradient descent"
-    },
-    {
-      "source": "b082f4948d1209a63926",
-      "target": "c5e8ee038b363e3a747e",
-      "type": "similar",
-      "strength": 0.38,
-      "terms": [
-        "gradient descent",
-        "stochastic gradient descent",
-        "descent sgd",
-        "gradient descent sgd"
-      ],
-      "explanation": "Common keywords: gradient descent, stochastic gradient descent, descent sgd, gradient descent sgd"
-    },
-    {
-      "source": "b082f4948d1209a63926",
-      "target": "e3d8c3501899e3ddd3ca",
-      "type": "similar",
-      "strength": 0.68,
-      "terms": [
-        "gradient descent",
-        "stochastic gradient descent",
-        "loss function"
-      ],
-      "explanation": "Common keywords: gradient descent, stochastic gradient descent, loss function"
-    },
-    {
-      "source": "b082f4948d1209a63926",
-      "target": "ecb52ce42202e1cca401",
-      "type": "similar",
-      "strength": 0.38,
-      "terms": [
-        "gradient descent",
-        "stochastic gradient descent",
-        "loss landscape",
+        "stochastic gradient",
         "descent sgd"
       ],
-      "explanation": "Common keywords: gradient descent, stochastic gradient descent, loss landscape, descent sgd"
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, stochastic gradient, descent sgd"
+    },
+    {
+      "source": "8b9302d041fe4790ec4d",
+      "target": "c5e8ee038b363e3a747e",
+      "type": "similar",
+      "strength": 0.38,
+      "terms": [
+        "gradient descent",
+        "stochastic gradient descent",
+        "stochastic gradient",
+        "descent sgd"
+      ],
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, stochastic gradient, descent sgd"
+    },
+    {
+      "source": "8b9302d041fe4790ec4d",
+      "target": "e3d8c3501899e3ddd3ca",
+      "type": "similar",
+      "strength": 0.54,
+      "terms": [
+        "gradient descent",
+        "stochastic gradient descent",
+        "stochastic gradient"
+      ],
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, stochastic gradient"
+    },
+    {
+      "source": "8b9302d041fe4790ec4d",
+      "target": "ecb52ce42202e1cca401",
+      "type": "similar",
+      "strength": 0.38,
+      "terms": [
+        "gradient descent",
+        "stochastic gradient descent",
+        "stochastic gradient",
+        "continuous time"
+      ],
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, stochastic gradient, continuous time"
+    },
+    {
+      "source": "b082f4948d1209a63926",
+      "target": "c5e8ee038b363e3a747e",
+      "type": "similar",
+      "strength": 0.38,
+      "terms": [
+        "gradient descent",
+        "stochastic gradient descent",
+        "stochastic gradient",
+        "descent sgd"
+      ],
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, stochastic gradient, descent sgd"
+    },
+    {
+      "source": "b082f4948d1209a63926",
+      "target": "e3d8c3501899e3ddd3ca",
+      "type": "similar",
+      "strength": 0.68,
+      "terms": [
+        "gradient descent",
+        "stochastic gradient descent",
+        "stochastic gradient",
+        "loss function"
+      ],
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, stochastic gradient, loss function"
+    },
+    {
+      "source": "b082f4948d1209a63926",
+      "target": "ecb52ce42202e1cca401",
+      "type": "similar",
+      "strength": 0.38,
+      "terms": [
+        "gradient descent",
+        "stochastic gradient descent",
+        "stochastic gradient",
+        "loss landscape"
+      ],
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, stochastic gradient, loss landscape"
     },
     {
       "source": "c5e8ee038b363e3a747e",
@@ -512,9 +639,10 @@
       "strength": 0.38,
       "terms": [
         "gradient descent",
-        "stochastic gradient descent"
+        "stochastic gradient descent",
+        "stochastic gradient"
       ],
-      "explanation": "Common keywords: gradient descent, stochastic gradient descent"
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, stochastic gradient"
     },
     {
       "source": "e3d8c3501899e3ddd3ca",
@@ -523,17 +651,18 @@
       "strength": 0.38,
       "terms": [
         "gradient descent",
-        "stochastic gradient descent"
+        "stochastic gradient descent",
+        "stochastic gradient"
       ],
-      "explanation": "Common keywords: gradient descent, stochastic gradient descent"
+      "explanation": "Common keywords: gradient descent, stochastic gradient descent, stochastic gradient"
     }
   ],
   "meta": {
-    "documents": 23,
-    "links": 24,
+    "documents": 24,
+    "links": 33,
     "citations": 4,
     "authors": 0,
-    "similar": 20,
+    "similar": 29,
     "openalex_requests": 1
   }
 }
